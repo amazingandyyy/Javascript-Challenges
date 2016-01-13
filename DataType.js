@@ -6,8 +6,10 @@ var udacityizer = function(s) {
     // Your code goes here!
 
 
-    if (s === 'Udacity')
-    
+    //if (s === 'Udacity')
+
+    s = s[1].toUpperCase() + s.slice(2);
+
 
     return s;
 };
