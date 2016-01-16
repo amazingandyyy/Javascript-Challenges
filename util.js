@@ -4,10 +4,48 @@
 var paramText = "Count me in";
 var superCounter = function(paramText) {
 
- //var numStr = paramText.toString();
- var numStr = paramText.toString().length; // chars
+var names = paramText.split(" ");
 
-return  numStr;
+var words = names.length;
+var chars = paramText.toString().length; // chars
+var avgLength = parseInt(chars / words);
+var spaces = names.length - 1;
+
+return "words : " + words +  ", chars : " + chars + ", avgLength : " + avgLength + ", spaces: " + spaces  ;
 }
 
 console.log(superCounter(paramText));
+
+
+var superCounter = function(str){
+  //code here
+
+ //object to return
+ var counterObject = {
+    words: wordCounter,
+    // chars: charCounter,
+    // spaces: spaceCounter,
+    // avgLength: wordAvgLength
+  };
+
+  wordCounter = function ()
+  {
+
+  }
+  return counterObject;
+
+}; //end superCounter function
+
+console.log(superCounter("Count me in"));
+
+// function nameChanger(oldName) {
+//     var finalName = oldName;
+//     var names = oldName.split(" ");
+//     names[1] = names[1].toUpperCase();
+//     names[0] = names[0].slice(0,1).toUpperCase() + names[0].slice(1).toLowerCase();
+//     finalName = names.join(" ");
+//     return finalName;
+// }
+//
+// var name = "Count to me";
+// console.log(nameChanger(name));
