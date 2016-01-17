@@ -16,10 +16,13 @@ return "words : " + words +  ", chars : " + chars + ", avgLength : " + avgLength
 
 console.log(superCounter(paramText));
 
-
+/////////////////////////////////////////////////
 var superCounter = function(str){
   //code here
+  wordCounter = function ()
+  {
 
+  }
  //object to return
  var counterObject = {
     words: wordCounter,
@@ -28,10 +31,7 @@ var superCounter = function(str){
     // avgLength: wordAvgLength
   };
 
-  wordCounter = function ()
-  {
 
-  }
   return counterObject;
 
 }; //end superCounter function
@@ -49,3 +49,14 @@ console.log(superCounter("Count me in"));
 //
 // var name = "Count to me";
 // console.log(nameChanger(name));
+
+
+var Util = {};
+
+Util.superPrintX = function() {
+  for (var i=0; i< argument.length; i++) {
+    consoloe.log(argument[i]);
+  }
+}
+
+Util.superPrintX("a", 2, "c", [4, 5, 6]);
