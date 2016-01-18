@@ -60,3 +60,11 @@ Util.superPrintX = function() {
 }
 
 Util.superPrintX("a", 2, "c", [4, 5, 6]);
+
+var A = function () { };
+A.x=function() {
+    console.log('hello');
+};
+A.prototype.x = function () {
+     console.log('world');
+};
