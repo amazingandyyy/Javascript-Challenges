@@ -1,9 +1,16 @@
 
 //superCounter("Count me in");
 //{"words": 3, "chars": 11, "avgLength": 3, "spaces": 2}
+
+var Util = {};
+Util.words = function() {
+
+}
+
 var paramText = "Count me in";
 var superCounter = function(paramText) {
 
+// split make an array
 var names = paramText.split(" ");
 
 var words = names.length;
