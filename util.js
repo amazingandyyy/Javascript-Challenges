@@ -15,8 +15,8 @@ var names = paramText.split(" ");
 
 var words = names.length;
 var chars = paramText.toString().length; // chars
-var avgLength = parseInt(chars / words);
 var spaces = names.length - 1;
+var avgLength = (chars - spaces) / words;
 
 return "words : " + words +  ", chars : " + chars + ", avgLength : " + avgLength + ", spaces: " + spaces  ;
 }
