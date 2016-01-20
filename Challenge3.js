@@ -17,17 +17,17 @@
 
 var Util = {
 
-// Util.paramText = "Count me in";
-superCounter : function(paramText) {
-  var names = paramText.split(" ");
+  // Util.paramText = "Count me in";
+  superCounter : function(paramText) {
+    var names = paramText.split(" ");
 
-  var words = names.length;
-  var chars = paramText.toString().length; // chars
-  var spaces = names.length - 1;
-  var avgLength = (chars - spaces) / words;
+    var words = names.length;
+    var chars = paramText.toString().length; // chars
+    var spaces = names.length - 1;
+    var avgLength = (chars - spaces) / words;
 
-  return "words : " + words +  ", chars : " + chars + ", avgLength : " + avgLength + ", spaces: " + spaces  ;
-}
+    return "words : " + words +  ", chars : " + chars + ", avgLength : " + avgLength + ", spaces: " + spaces  ;
+  }
 
 }
 
