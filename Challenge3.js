@@ -15,8 +15,10 @@
 //
 // console.log(superCounter(paramText));
 
-var Util = {
+//Well, that was not what I meant but glad to see you do understand objects. I meant instead of returning the string at the end of the function, have it return an object with all of those keys/values. Remove all quotations from your return value.
 
+
+var Util = {
   // Util.paramText = "Count me in";
   superCounter : function(paramText) {
     var names = paramText.split(" ");
