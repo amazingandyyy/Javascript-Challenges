@@ -4,8 +4,12 @@
 <title>Challenge 7</title>
 
 
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -13,13 +17,30 @@
 
   <nav class="navbar navbar-default">
     <div class="container-fluid">
-      <div class="navbar-header">
+      <!-- <div class="navbar-header">
 
-      </div>
+      </div> -->
 
       <ul class="nav navbar-nav">
         <li><i class="fa fa-home  fa-2x" style="padding-top: 12px; padding-right: 9px;"></i></li>
-        <li class="active"><a href="#">Community</a></li>
+        <!-- <li class="active"><a href="#">Community</a></li> -->
+
+        <li class = "dropdown active" >
+          <a class = "dropdown-toggle" data-toggle="dropdown" href="#">
+             Community
+             <span class="caret"></span>
+          </a>
+          <ul class = "dropdown-menu">
+             <li><a href="#">Recent Activity</a></li>
+             <li class="divider"></li>
+             <li><a href="#">Member Forum</a></li>
+             <li class="divider"></li>
+             <li><a href="#">Member List</a></li>
+             <li class="divider"></li>
+             <li><a href="#">Member Groups</a></li>
+          </ul>
+        </li>
+
         <li><a href="#">Pet Help</a></li>
         <li><a href="#">Pets for Sale</a></li>
         <li><a href="#">Pet Services</a></li>
@@ -28,4 +49,13 @@
   </nav>
 
 </body>
+
+<script>
+$(document).ready(function() {
+    $(".dropdown-toggle").dropdown();
+});
+
+</script>
+
+
 </html>
