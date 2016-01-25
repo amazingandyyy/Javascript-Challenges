@@ -10,10 +10,20 @@ function wordsReverser(param) {
 
   var reverseArray = wordsArray.map(function(string) {
 
+  var word = string.split("");
+
+  var punctuation = word.pop(); //
+
+  var reversedWord = word.reverse();
+
+  reversedWord.push(punctuation);
+
+  // return joined word
+
+  return reversedWord.join("");
+
   }
 
-
-
-
-
 }
+
+console.log(wordsReverser("This is fun, hopefully."));
