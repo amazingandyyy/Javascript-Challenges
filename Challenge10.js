@@ -1,4 +1,15 @@
 // Challenge10.js
+// Write a javascript function that takes multiple arguments that are all integers and calculates the following:
+//
+// Count of odd integers
+// Count of negative integers
+// The average of all integers (round to 2 decimal)
+// The median of all integers
+// The function should return these values in an object.
+//
+// Test case
+
+
 // Array Analyzer
 function arrayAnalyzer(args) {
 

@@ -1,3 +1,6 @@
+// Write a JavaScript function that takes one argument that is a sentence (multiple words) and returns a new sentence where all words are reversed but kept in the same order as the original sentence.
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
+
 function wordsReverser(str) {
 
   var wordsArray = str.match(/[a-z.,-\/#!$%\^&\*;:{}=\_`~()1-90]+/gi);
