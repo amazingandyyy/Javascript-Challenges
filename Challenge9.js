@@ -23,7 +23,6 @@ function wordsReverser(str) {
       var reversedWord = word.reverse();
       console.log("reversedWord:" + reversedWord);
 
-
       // push punctuation onto the end of reversed characters array
       reversedWord.push(punctuation);
       // return joined word
