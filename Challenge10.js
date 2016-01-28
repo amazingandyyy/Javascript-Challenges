@@ -7,18 +7,22 @@
 // The median of all integers
 // The function should return these values in an object.
 //
-// Test case
+// Test case  arrayAnalyzer(7, -3, 0, 12, 44, -5, 3);
+// median -5, -3, 0, 3, 7, 12, 44
+// would return: { "odds": 4, "negatives": 2, "avg": 8.29, "median": 3 }
 
 // Array Analyzer
 function arrayAnalyzer(args) {
 
-  console.log("args:" + args);
+  // console.log("args:" + args);
 
   // return error if function has no arguments
   if (arguments.length < 1) { return "arrayAnalyzer(args) requires at least one number argument"; }
 
+  // console.log("arguments length:" + arguments.length);
+
   // arguments to array
-  var argsArray = Array.prototype.slice.call(arguments);
+  var argsarray = Array.prototype.slice.call(arguments);
 
   // filter out non-numbers
   var filteredArray = argsArray.filter(function(n) {
@@ -109,4 +113,5 @@ function arrayAnalyzer(args) {
   return returnObject;
 }
 
-console.log(arrayAnalyzer(7, -3, 0, 12, 44, -5, 3, "string"));
+// console.log(arrayAnalyzer(7, -3, 0, 12, 44, -5, 3, "string"));
+console.log(arrayAnalyzer(7, -3, 0, 12, 44, -5, 3));
