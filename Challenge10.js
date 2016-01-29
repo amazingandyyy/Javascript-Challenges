@@ -14,13 +14,17 @@
 // Array Analyzer
 function arrayAnalyzer(args) {
 
+  // console.log("args:" + args);
+
   // return error if function has no arguments
   if (arguments.length < 1) { return "arrayAnalyzer(args) requires at least one number argument"; }
 
   // console.log("arguments length:" + arguments.length);
 
-  // arguments to array
-  var argsarray = Array.prototype.slice.call(arguments);
+  // arguments is special varliable which is also have length but not "array"
+  // arguments convert to array prototype -> slice -> call
+  // but it might have have performance issue 
+  var argsArray = Array.prototype.slice.call(arguments);
 
   // filter out non-numbers
   var filteredArray = argsArray.filter(function(n) {
