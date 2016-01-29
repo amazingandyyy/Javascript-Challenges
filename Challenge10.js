@@ -14,8 +14,6 @@
 // Array Analyzer
 function arrayAnalyzer(args) {
 
-  // console.log("args:" + args);
-
   // return error if function has no arguments
   if (arguments.length < 1) { return "arrayAnalyzer(args) requires at least one number argument"; }
 
