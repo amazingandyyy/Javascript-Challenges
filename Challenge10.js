@@ -21,6 +21,8 @@ function arrayAnalyzer(args) {
 
   // console.log("arguments length:" + arguments.length);
 
+
+  // ref url: http://bonsaiden.github.io/JavaScript-Garden/ko/#core.eval
   // arguments is special varliable which is also have length but not "array"
   // There are no standard push, pop, slice method
   // arguments convert to array prototype -> slice -> call
