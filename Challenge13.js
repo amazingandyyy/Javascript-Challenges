@@ -12,8 +12,29 @@
 function wordSelector(sentence) {
 
   // 1) split sentence to array
-  var array = sentence.split(" ");
-  console.log("array[1]:" + array[1]);
+  // var array = sentence.split(" ");
+  var array = sentence.match(/[a-z]+/ig);
+
+  //array.sort();
+  console.log("array:" + array);
+  // console.log("array.sort():" + array.sort());
+
+  // var arraySort = [];
+  for(var i=0; i < array.length; i++) {
+
+    for(var j=0; j < array[j].length; j++) {
+      console.log("array[j]: " + array[j].charAt(j));
+    }
+
+  }
+
+  // var mapped = array.map(function(el, i) {
+  //   console.log("mapped: el " + el + "mapped: i " + i);
+  //   // return {
+  //   //   index: i, value: el.toLowerCase()
+  //   // };
+  // })
+
   // 2) to check
 }
 
