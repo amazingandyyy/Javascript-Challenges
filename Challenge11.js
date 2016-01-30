@@ -1,7 +1,7 @@
 function age(year, month, day) {
 
   //var today = new Date(2015, 4, 2);
-  var today =getDate();
+  var today = new Date();
   var targetDate = new Date(year, month, day);
 
   var days = Math.abs(today.getDate() - targetDate.getDate());
