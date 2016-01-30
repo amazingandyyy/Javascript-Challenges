@@ -9,11 +9,11 @@
 //
 // ["attribute", "success"]
 
-
-
 function wordSelector(sentence) {
 
   // 1) split sentence to array
+  var array = sentence.split(" ");
+  console.log("array[1]:" + array[1]);
   // 2) to check
 }
 
