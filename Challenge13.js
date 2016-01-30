@@ -15,15 +15,20 @@ function wordSelector(sentence) {
   // var array = sentence.split(" ");
   var array = sentence.match(/[a-z]+/ig);
 
-  //array.sort();
-  console.log("array:" + array);
-  // console.log("array.sort():" + array.sort());
-
   // var arraySort = [];
   for(var i=0; i < array.length; i++) {
 
-    for(var j=0; j < array[j].length; j++) {
-      console.log("array[j]: " + array[j].charAt(j));
+    var arrayWord = array[i];
+
+    for(var j=0; j < arrayWord.length; j++) {
+
+      var repeatCount = 0;
+
+      for(var k=0; arrayWord.length; k++) {
+        if(arrayWord[i] == arrayWord[j]) {
+          console.log("repeatCount:" + repeatCount);
+        }
+      }
     }
 
   }
