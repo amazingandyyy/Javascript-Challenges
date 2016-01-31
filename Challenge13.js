@@ -13,7 +13,7 @@ function wordSelector(sentence) {
 
   // 1) split sentence to array
   // var array = sentence.split(" ");
-  // match is more mainpulate
+  // match method is more useful
   var array = sentence.match(/[a-z]+/ig);
 
   // var arraySort = [];
