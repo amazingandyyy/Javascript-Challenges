@@ -1,2 +1,2 @@
 # javascript-loop
-Coding House javascript practice
+Coding House javascript challenges
