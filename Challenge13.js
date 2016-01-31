@@ -12,11 +12,10 @@
 function wordSelector(sentence) {
 
   // 1) split sentence to array
-  // var array = sentence.split(" ");
-  // match method is more useful
+  // How to: split or match Method
+  // match method is more useful to manipulate one line of code ".", "–"
   var array = sentence.match(/[a-z]+/ig);
 
-  // var arraySort = [];
   for(var i=0; i < array.length; i++) {
 
     var arrayWord = array[i];
