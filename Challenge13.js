@@ -27,6 +27,8 @@ function wordSelector(sentence) {
       for(var k=0; arrayWord.length; k++) {
         if(arrayWord[i] == arrayWord[j]) {
           console.log("repeatCount:" + repeatCount);
+
+          repeatCount++;
         }
       }
     }
