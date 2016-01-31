@@ -1,6 +1,8 @@
 # javascript-loop
-Coding House javascript challenges which is include source code based on my experience 
+Coding House javascript challenges which is include source code based on during challenges 
 
-And also I found useful reference from everywhere here are url 
-http://bonsaiden.github.io/JavaScript-Garden/
+And also I found useful reference from super excellent here are url 
+1) http://bonsaiden.github.io/JavaScript-Garden/
+2) http://eloquentjavascript.net/
+3) http://reactivex.io/learnrx/
 
