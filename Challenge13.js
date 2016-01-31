@@ -12,29 +12,17 @@
 function wordSelector(sentence) {
 
   // 1) split sentence to array
-  // How to: split or match Method
-  // match method is more useful to manipulate one line of code ".", "–"
+  // How to: Use split or match Method
+  // match method is more useful one line of code parssing token such as  ".", "–"
   var array = sentence.match(/[a-z]+/ig);
 
   for(var i=0; i < array.length; i++) {
 
-    var arrayWord = array[i];
-
-    for(var j=0; j < arrayWord.length; j++) {
-
-      var repeatCount = 0;
-
-      for(var k=0; arrayWord.length; k++) {
-        if(arrayWord[i] == arrayWord[j]) {
-          console.log("repeatCount:" + repeatCount);
-
-          repeatCount++;
-        }
-      }
-    }
-
+    //["I","attribute","my","success","to"...]
+    var arrayLetter = array[i];
+    // Repeat letter counter
+    repeatLetterCounter(arrayLetter);
   }
-
   // var mapped = array.map(function(el, i) {
   //   console.log("mapped: el " + el + "mapped: i " + i);
   //   // return {
@@ -43,6 +31,14 @@ function wordSelector(sentence) {
   // })
 
   // 2) to check
+}
+
+function repeatLetterCounter(arrayLetter) {
+
+  for(var i=0; i<arrayLetter.length; i++) {
+
+  }
+
 }
 
 console.log(wordSelector("I attribute my success to this: I never gave or took any excuse. –Florence Nightingale"));
