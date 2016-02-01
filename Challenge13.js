@@ -35,9 +35,29 @@ function wordSelector(sentence) {
 
 function repeatLetterCounter(arrayLetter) {
 
+  var uniqueTokenLetter = "";
+  var repeatLetter = 2;
+
   for(var i=0; i<arrayLetter.length; i++) {
 
+    if (uniqueTokenLetter.indexOf(arrayLetter.charAt(i)) === -1) {
+
+        // pattern format example: /s/gi
+        var pattern = RegExp(arrayLetter[i], "gi");
+
+        // return matching letter "sucess" ==> ["s", "s", "s"]
+        var arrayMatchingLetter = arrayLetter.match(pattern);
+
+        if (arrayMatchingLetter.length > ) {
+          repeatLetter = arrayMatchingLetter.length;
+        }
+
+    }
+
+
   }
+
+  return repeatLetter;
 
 }
 
