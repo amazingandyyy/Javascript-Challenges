@@ -48,9 +48,11 @@ function repeatLetterCounter(arrayLetter) {
         // return matching letter "sucess" ==> ["s", "s", "s"]
         var arrayMatchingLetter = arrayLetter.match(pattern);
 
-        if (arrayMatchingLetter.length > ) {
+        if (arrayMatchingLetter.length > repeatLetter) {
           repeatLetter = arrayMatchingLetter.length;
         }
+
+        uniqueTokenLetter += arrayLetter.charAt(i);
 
     }
 
