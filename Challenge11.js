@@ -1,3 +1,5 @@
+// There is definitely a problem that comes up if you are using absolute values. Test a date that is 364 days from now ("a year from yesterday"). Your function returns that it is one year and one day from now, when in fact it is one day less than a year.
+
 function age(year, month, day) {
 
   var today = new Date();
