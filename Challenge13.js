@@ -11,7 +11,7 @@
 
       function wordSelector(sentence) {
 
-          // 1) split sentence to array
+          // split sentence to array
           // How to: Use split or match Method
           // match method is more useful one line of code parssing token such as  ".", "–"
           var array = sentence.match(/[a-z]+/ig);
