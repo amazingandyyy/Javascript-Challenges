@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<title>Challege #8 Bootstrap Nav Bar</title>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<script>
+function age(year, month, day) {
+
+  var today = new Date();
+  var targetDate = new Date(year, month, day);
+
+  var days = Math.abs(today.getDate() - targetDate.getDate());
+  var months = Math.abs(today.getMonth() - targetDate.getMonth());
+  var years = Math.abs(today.getFullYear() - targetDate.getFullYear());
+
+  return years + " years" + " " + months + " months" + " " + days + " days";
+}
+
+console.log(age(2017, 1, 2));
+// function age(year,month,day) {
+//
+// 	var today = new Date().getTime();
+// 	var targetDate = new Date(year, month, day).getTime();
+// 	var daysMillSeconds = (targetDate - today);
+// 	var totalDays = Math.floor(daysMillSeconds / (24*60*60 * 1000));
+//
+// 	if (months >= 12) {
+// 	     var months = parseInt(totalDays / 30);
+// 	     var years = months / 12;
+// 	} else {
+// 	     var years = 0;
+// 	}
+//
+// 	if (totalDays >= 30) {
+// 	     var days = totalDays % 30;
+// 	}
+//
+//   return years + " years" + " " + months + " months" + " " + days + " days";
+// };
+//
+//  console.log(age(2017, 1, 2));
+</script>
+
+
+  <body>
+
+    <div id="container">
+    </div>
+
+  </body>
+</html>
