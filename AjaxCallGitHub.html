@@ -8,51 +8,32 @@
 <body>
 
 <div class="container">
-	<h4>GitHub Profile Retrieve</h4>
-	<label for="username">Username:</label>
-	<input type="text" id="username">
-	<button id="addCard">Add Card</button>
+	<h4>Ajax Learning</h4>
+	<button id="divCall">Call</button>
 </div>
-
-<div id="output" style="margin-top: 10px;"></div>
 
 <script TYPE="text/javascript">
 
 $(document).ready(init);
 
 function init() {
-	$("#addCard").click(addCardHandler);
+	$("#divCall").click(addCallHandler);
 }
 
-function addCardHandler() {
-
-	var $usernameInput = $("#username");
-	var username = $usernameInput.val();
-
-	$.get("http://api.github.com/users/" + username)
-
+function addCallHandler() {
+	$.ajax("http://httpbin.org/post", {
+		type: "POST",
+		data: { Coding: 'House'}
+	})
 	.done(function(data, status) {
-		console.log("data", data);
-		console.log("status", status);
-		var $card = makeCard(data);
-		$("#output").append($card);
-	})
-	.fail(function(data, status) {
-		console.log("data", data);
-		console.log("status", status);
-	})
+			console.log("data", data);
+			console.log("status", status);
+		})
+		.fail(function(data, status) {
+			console.log("data", data);
+			console.log("status", status);
+		})
 }
-
-
-function makeCard(data) {
-
-	var $card = $('<div>').addClass('card');
-	var $avatar = $('<img>').attr('src', data.avatar_url);
-	var $name = $('<div>').text(data.name);
-	$card.append($avatar).append($name);
-	return $card;
-}
-
 </script>
 </body>
 </html>
