@@ -26,7 +26,7 @@ function addCardHandler() {
 
 function makeCard(data) {
 
-	var $card = $('<div>').addClass('card');
+	var $card = $('<div>').addClass('card').css('width', '150px');
 	var $avatar = $('<img>').attr('src', data.avatar_url);
 	var $name = $('<div>').text(data.name);
 	$card.append($avatar).append($name);
