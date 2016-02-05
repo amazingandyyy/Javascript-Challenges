@@ -1,23 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<title></title>
-</head>
-
-<body>
-
-<div class="container">
-	<h4>GitHub Profile Retrieve</h4>
-	<label for="username">Username:</label>
-	<input type="text" id="username">
-	<button id="addCard">Add Card</button>
-</div>
-
-<div id="output" style="margin-top: 10px;"></div>
-
-<script TYPE="text/javascript">
-
 $(document).ready(init);
 
 function init() {
@@ -52,7 +32,3 @@ function makeCard(data) {
 	$card.append($avatar).append($name);
 	return $card;
 }
-
-</script>
-</body>
-</html>
