@@ -9,9 +9,9 @@ function findLargestNumber(array) {
   var largestNumber = 0;
   var i = 0;
   while (array[i]) {
-
     if (largestNumber < array[i])
       largestNumber = array[i];
+
       i++;
   }
   console.log("while loop largestNumber: " + largestNumber);
@@ -28,8 +28,6 @@ function findLargestNumber(array) {
   while ( i < array.length )
   console.log("Do while loop largestNumber: " + largestNumber);
 
-
-
   largestNumber = 0;  // Reset the largestNumber to 0
   // For loops
   for (var i=0; i<array.length; i++) {
@@ -38,24 +36,38 @@ function findLargestNumber(array) {
       largestNumber = array[i];
   }
   console.log("for loop largestNumber: " + largestNumber);
-
-  // var sortReturn =
-  //
-  // array.sort(function (a, b) {
-  //       return (a < b);
-  // })
-  //
-  // console.log(sortReturn);
-  //
-  // console.log(array[0]);
 }
 
-var array = [2, 7, 4, 8, 6, 4];
-findLargestNumber(array);
-
+// var array = [2, 7, 4, 8, 6, 4];
+// findLargestNumber(array);
 
 // Using a for...in loop, console.log all of the keys and values in the following object:
 // { "wheels": 3, "horsepower": 600, "decal": "flames", "awesome": true , "holdsBarred": [] }
+
+function followingObjet(car) {
+
+  // for loop
+
+  for(var key in car) {
+
+    console.log(" :" +  car[key]);
+
+  }
+
+  // console.log
+
+}
+
+var car = {
+  "wheels": 3,
+  "horsepower": 600,
+  "decal": "flames",
+  "awesome": true ,
+  "holdsBarred": []
+}
+
+followingObjet(car);
+
 
 // Using the .map function return an array that is equal to the squares each of the values in the following array:
 // [1, 2, 5, 7, 11]
