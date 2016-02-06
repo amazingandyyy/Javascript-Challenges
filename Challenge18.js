@@ -17,8 +17,8 @@ function findLargestNumber(array) {
   console.log("while loop largestNumber: " + largestNumber);
 
   // Do while Loops
-  largestNumber = 0;  // Reset the largestNumber to 0
-  i = 0;              // Reset condition i = 0
+  largestNumber = 0;
+  i = 0;
   do {
     if (largestNumber < array[i])
       largestNumber = array[i];
@@ -28,7 +28,7 @@ function findLargestNumber(array) {
   while ( i < array.length )
   console.log("Do while loop largestNumber: " + largestNumber);
 
-  largestNumber = 0;  // Reset the largestNumber to 0
+  largestNumber = 0;
   // For loops
   for (var i=0; i<array.length; i++) {
 
@@ -38,8 +38,8 @@ function findLargestNumber(array) {
   console.log("for loop largestNumber: " + largestNumber);
 }
 
-// var array = [2, 7, 4, 8, 6, 4];
-// findLargestNumber(array);
+var array = [2, 7, 4, 8, 6, 4];
+findLargestNumber(array);
 
 // Using a for...in loop, console.log all of the keys and values in the following object:
 // { "wheels": 3, "horsepower": 600, "decal": "flames", "awesome": true , "holdsBarred": [] }
@@ -66,11 +66,11 @@ keyValueObject(car);
 // Using the .map function return an array that is equal to the squares each of the values in the following array:
 // [1, 2, 5, 7, 11]
 
-function squaresMap(array) {
+function squaresMap(arraySquares) {
 
   var squares;
   squares = (
-    array.map(function (num) {
+    arraySquares.map(function (num) {
       return (num * num);
     })
   )
@@ -78,17 +78,17 @@ function squaresMap(array) {
   return squares;
 }
 
-// var array = [1, 2, 5, 7, 11];
-// console.log(squaresMap(array));
+var arraySquares = [1, 2, 5, 7, 11];
+console.log(squaresMap(arraySquares));
 
 // Using the .reduce function find the product of the numbers in the following array:
 // [3, 5, 7, 9, 12]
 
-function productReduce(array) {
+function productReduce(arrayProduct) {
 
     var product;
     product = (
-      array.reduce(function (prev, next) {
+      arrayProduct.reduce(function (prev, next) {
         return (prev * next);
     })
   )
@@ -96,40 +96,41 @@ function productReduce(array) {
   return product;
 }
 
-// var array = [3, 5, 7, 9, 12];
-// productReduce(array);
+var arrayProduct = [3, 5, 7, 9, 12];
+productReduce(arrayProduct);
 
 // Using the .filter function create a new array of only odd numbers from the following array:
 // [1, 22, 35, 2, 4, 7, 9]
 
-function oddNumberFilter(array) {
+function oddNumberFilter(arrayNumbers) {
 
   var oddNumberArray = [];
 
-  array.filter(function (num) {
+  arrayNumbers.filter(function (num) {
 
       if (num % 2 !== 0) {
         oddNumberArray.push(num);
-        console.log("oddNumberArray: " + oddNumberArray);
       }
   })
+
+  return oddNumberArray;
 }
 
-// var array = [1, 22, 35, 2, 4, 7, 9];
-// oddNumberFilter(array);
+var arrayNumbers = [1, 22, 35, 2, 4, 7, 9];
+oddNumberFilter(arrayNumbers);
 
 // Using the .sort function, sort the following array reverse-alphabetically:
 // ['water', 'balloon', 'baseball', 'computer', 'notebook', 'frisbee']
 
-function utilityFunction(array) {
+function utilityFunction(arrayWords) {
 
-    array.sort(function (word) {
+    var result =
+      arrayWords.sort(function (word) {
+        return ("parm: " + word.split("").reverse().join(""));
+      });
 
-      console.log("parm: " + word.split("").reverse().join(""));
-
-    });
-
+    return result;
 }
 
-var array = ['water', 'balloon', 'baseball', 'computer', 'notebook', 'frisbee'];
-console.log(utilityFunction(array));
+var arrayWords = ['water', 'balloon', 'baseball', 'computer', 'notebook', 'frisbee'];
+console.log(utilityFunction(arrayWords));
