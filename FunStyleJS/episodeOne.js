@@ -1,12 +1,21 @@
 // FunStyleJS
 'use strict';
 
-if (typeof APP == 'undefined') {
+if (typeof App == 'undefined') {
 
-  var APP = {};
-  APP.Whocare = {};
-  APP.IdoCare = {};
-  APP.IdontCare = {};
+  var App = {};
+  App.Whocare = {};
+  App.IdoCare = {};
+  App.IdontCare = {};
+
+  App.findLagestNumber = {
+    
+
+
+  };
+
+
 }
 
-var APP = APP || {}
+
+var App = App || {}
