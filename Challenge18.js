@@ -50,7 +50,8 @@ function followingObjet(car) {
 
   for(var key in car) {
 
-    console.log(" :" +  car[key]);
+    console.log("key :" +  key);
+    console.log("value :" +  car[key]);
 
   }
 
