@@ -44,19 +44,13 @@ function findLargestNumber(array) {
 // Using a for...in loop, console.log all of the keys and values in the following object:
 // { "wheels": 3, "horsepower": 600, "decal": "flames", "awesome": true , "holdsBarred": [] }
 
-function followingObjet(car) {
+function keyValueObject(car) {
 
   // for loop
-
   for(var key in car) {
-
-    console.log("key :" +  key);
-    console.log("value :" +  car[key]);
-
+    console.log("key : " +  key);
+    console.log("value : " +  car[key]);
   }
-
-  // console.log
-
 }
 
 var car = {
@@ -67,17 +61,75 @@ var car = {
   "holdsBarred": []
 }
 
-followingObjet(car);
-
+keyValueObject(car);
 
 // Using the .map function return an array that is equal to the squares each of the values in the following array:
 // [1, 2, 5, 7, 11]
 
+function squaresMap(array) {
+
+  var squares;
+  squares = (
+    array.map(function (num) {
+      return (num * num);
+    })
+  )
+
+  return squares;
+}
+
+// var array = [1, 2, 5, 7, 11];
+// console.log(squaresMap(array));
+
 // Using the .reduce function find the product of the numbers in the following array:
 // [3, 5, 7, 9, 12]
+
+function productReduce(array) {
+
+    var product;
+    product = (
+      array.reduce(function (prev, next) {
+        return (prev * next);
+    })
+  )
+
+  return product;
+}
+
+// var array = [3, 5, 7, 9, 12];
+// productReduce(array);
 
 // Using the .filter function create a new array of only odd numbers from the following array:
 // [1, 22, 35, 2, 4, 7, 9]
 
+function oddNumberFilter(array) {
+
+  var oddNumberArray = [];
+
+  array.filter(function (num) {
+
+      if (num % 2 !== 0) {
+        oddNumberArray.push(num);
+        console.log("oddNumberArray: " + oddNumberArray);
+      }
+  })
+}
+
+// var array = [1, 22, 35, 2, 4, 7, 9];
+// oddNumberFilter(array);
+
 // Using the .sort function, sort the following array reverse-alphabetically:
 // ['water', 'balloon', 'baseball', 'computer', 'notebook', 'frisbee']
+
+function utilityFunction(array) {
+
+    array.sort(function (word) {
+
+      console.log("parm: " + word.split("").reverse().join(""));
+
+    });
+
+}
+
+var array = ['water', 'balloon', 'baseball', 'computer', 'notebook', 'frisbee'];
+console.log(utilityFunction(array));
