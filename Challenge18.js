@@ -5,27 +5,39 @@
 
 function findLargestNumber(array) {
 
-  // while Loops
+  // While Loops
   var largestNumber = 0;
   var i = 0;
-  while (1) {
+  while (array[i]) {
 
-    if (largestNumber > array[i])
+    if (largestNumber < array[i])
+      largestNumber = array[i];
+      i++;
+  }
+  console.log("while loop largestNumber: " + largestNumber);
+
+  // Do while Loops
+  largestNumber = 0;  // Reset the largestNumber to 0
+  i = 0;              // Reset condition i = 0
+  do {
+    if (largestNumber < array[i])
       largestNumber = array[i];
 
-      i++;
-
-    if (i >= array.length)
-      break;
+    i++;
   }
+  while ( i < array.length )
+  console.log("Do while loop largestNumber: " + largestNumber);
 
-  var largestNumber = 0;
+
+
+  largestNumber = 0;  // Reset the largestNumber to 0
+  // For loops
   for (var i=0; i<array.length; i++) {
 
     if (array[i] > largestNumber)
       largestNumber = array[i];
   }
-  console.log(largestNumber);
+  console.log("for loop largestNumber: " + largestNumber);
 
   // var sortReturn =
   //
