@@ -4,7 +4,7 @@
 
 <body>
 
-<style>
+<script>
 // Use a variety of different solutions to find the largest number in an array. Use a while loop, a do..while loop, a for loop, and a forEach loop. Use the following array for each of these loops:
 // [2, 7, 4, 8, 6, 4]
 
@@ -13,8 +13,8 @@ function findLargestNumber(array) {
   var largestNumber = 0;
   for (var i=0; i<array.length; i++) {
 
-    if (largestNumber > array.length[i])
-      largestNumber = array.length[i];
+    if (largestNumber > array[i])
+      largestNumber = array[i];
   }
 
   console.log(largestNumber);
@@ -32,7 +32,7 @@ function findLargestNumber(array) {
 
 var array = [2, 7, 4, 8, 6, 4];
 findLargestNumber(array);
-</style>
+</script>
 
 </body>
 </html>

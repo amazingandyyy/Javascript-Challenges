@@ -8,8 +8,8 @@ function findLargestNumber(array) {
   var largestNumber = 0;
   for (var i=0; i<array.length; i++) {
 
-    if (largestNumber > array.length[i])
-      largestNumber = array.length[i];
+    if (array[i] > largestNumber)
+      largestNumber = array[i];
   }
 
   console.log(largestNumber);
