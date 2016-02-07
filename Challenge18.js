@@ -36,6 +36,16 @@ function findLargestNumber(array) {
       largestNumber = array[i];
   }
   console.log("for loop largestNumber: " + largestNumber);
+
+
+  largestNumber = 0;
+  // For Each
+  array.forEach(function(num) {
+    if (num > largestNumber)
+      largestNumber = num;
+  } )
+  console.log("forEach loop largestNumber: " + largestNumber);
+
 }
 
 var array = [2, 7, 4, 8, 6, 4];
