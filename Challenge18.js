@@ -79,7 +79,7 @@ function squaresMap(arraySquares) {
 
   var squares;
   squares = (
-    arraySquares.map(function (num) {
+    arraySquares.map(function(num) {
       return (num * num);
     })
   )
@@ -97,7 +97,7 @@ function productReduce(arrayProduct) {
 
     var product;
     product = (
-      arrayProduct.reduce(function (prev, next) {
+      arrayProduct.reduce(function(prev, next) {
         return (prev * next);
     })
   )
@@ -114,7 +114,7 @@ productReduce(arrayProduct);
 function oddNumberFilter(arrayNumbers) {
 
   var oddNumberArray = [];
-  arrayNumbers.filter(function (num) {
+  arrayNumbers.filter(function(num) {
 
       if (num % 2 !== 0) {
         oddNumberArray.push(num);
@@ -133,7 +133,7 @@ oddNumberFilter(arrayNumbers);
 function utilityFunction(arrayWords) {
 
     var result =
-      arrayWords.sort(function (word) {
+      arrayWords.sort(function(word) {
         return ("parm: " + word.split("").reverse().join(""));
       });
 
