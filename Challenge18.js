@@ -132,10 +132,10 @@ oddNumberFilter(arrayNumbers);
 
 function utilityFunction(arrayWords) {
 
-    var result =
-      arrayWords.sort(function(word) {
-        return word.split("").reverse().join("");
-      });
+    var result = [];
+    arrayWords.sort(function(word) {
+      result.push(word.split("").reverse().join(""));
+    });
 
     return result;
 }

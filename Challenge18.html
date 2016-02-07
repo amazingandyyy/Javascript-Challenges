@@ -5,58 +5,18 @@
 <body>
 
 <script>
-// Use a variety of different solutions to find the largest number in an array. Use a while loop, a do..while loop, a for loop, and a forEach loop. Use the following array for each of these loops:
-// [2, 7, 4, 8, 6, 4]
+function utilityFunction(arrayWords) {
 
-function findLargestNumber(array) {
+    var result = [];
+    arrayWords.sort(function(word) {
+      result.push(word.split("").reverse().join(""));
+    });
 
-  // While Loops
-  var largestNumber = 0;
-  var i = 0;
-  while (array[i]) {
-
-    if (largestNumber < array[i])
-      largestNumber = array[i];
-      i++;
-  }
-  console.log("while loop largestNumber: " + largestNumber);
-
-  // Do while Loops
-  largestNumber = 0;  // Reset the largestNumber to 0
-  i = 0;              // Reset condition i = 0
-  do {
-    if (largestNumber < array[i])
-      largestNumber = array[i];
-
-    i++;
-  }
-  while ( i < array.length )
-  console.log("Do while loop largestNumber: " + largestNumber);
-
-
-
-  largestNumber = 0;  // Reset the largestNumber to 0
-  // For loops
-  for (var i=0; i<array.length; i++) {
-
-    if (array[i] > largestNumber)
-      largestNumber = array[i];
-  }
-  console.log("for loop largestNumber: " + largestNumber);
-
-  // var sortReturn =
-  //
-  // array.sort(function (a, b) {
-  //       return (a < b);
-  // })
-  //
-  // console.log(sortReturn);
-  //
-  // console.log(array[0]);
+    return result;
 }
 
-var array = [2, 7, 4, 8, 6, 4];
-findLargestNumber(array);
+var arrayWords = ['water', 'balloon', 'baseball', 'computer', 'notebook', 'frisbee'];
+console.log(utilityFunction(arrayWords));
 </script>
 
 </body>
