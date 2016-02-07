@@ -20,5 +20,4 @@ function fromCharCode() {
 }
 
 var stringCharCode = fromCharCode();
-
 console.log(stringCharCode);

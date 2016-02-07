@@ -134,7 +134,7 @@ function utilityFunction(arrayWords) {
 
     var result =
       arrayWords.sort(function(word) {
-        return ("parm: " + word.split("").reverse().join(""));
+        return word.split("").reverse().join("");
       });
 
     return result;
