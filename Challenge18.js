@@ -12,7 +12,7 @@ function findLargestNumber(array) {
     if (largestNumber < array[i])
       largestNumber = array[i];
 
-      i++;
+    i++;
   }
   console.log("while loop largestNumber: " + largestNumber);
 
@@ -36,7 +36,6 @@ function findLargestNumber(array) {
       largestNumber = array[i];
   }
   console.log("for loop largestNumber: " + largestNumber);
-
 
   largestNumber = 0;
   // For Each
@@ -115,7 +114,6 @@ productReduce(arrayProduct);
 function oddNumberFilter(arrayNumbers) {
 
   var oddNumberArray = [];
-
   arrayNumbers.filter(function (num) {
 
       if (num % 2 !== 0) {
