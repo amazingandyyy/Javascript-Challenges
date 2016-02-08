@@ -131,14 +131,7 @@ oddNumberFilter(arrayNumbers);
 // ['water', 'balloon', 'baseball', 'computer', 'notebook', 'frisbee']
 
 function utilityFunction(arrayWords) {
-
-    // var result = [];
-    // arrayWords.sort(function(word) {
-    //   result.push(word.split("").reverse().join(""));
-    // });
-    //
-    // return result;
-    return arrayWords.sort().reverse();
+  return arrayWords.sort().reverse();
 }
 
 var arrayWords = ['water', 'balloon', 'baseball', 'computer', 'notebook', 'frisbee'];
