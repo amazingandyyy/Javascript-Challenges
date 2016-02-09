@@ -36,7 +36,6 @@ function guessWord() {
 
       correct++;
       // highlight matching letter
-
       wordHolder = wordHolder.substring(0, i) + letter + wordHolder.substring(i + 1, wordHolder.length + 1);
       // wordHolder = wordHolder.substring();
 
@@ -62,6 +61,7 @@ function guessWord() {
     // Hangman game over
   }
 
+  console.log("wordHolder: " + wordHolder);
 
 }
 
