@@ -23,18 +23,35 @@ function guessWord() {
   // if match word
   // for testing propose to choose words[0] word
 
+  var correct = 0, inCorrect = 0;
   var word = words[0];
+  inCorrect = word.length;
+
   for (var i=0; i < word.length; i++) {
     if ( letter === word.substring(i, i + 1) ) {
-        console.log("letter2222: " + letter);
+
+      correct++;
+      // highlight matching letter
+
     }
   }
 
   // if doesn't match word
+  if (correct == 0) {
+    inCorrect--;
+    // pic roation in Hangman
+  }
 
   // if match word count reached
+  if (correct === word.length) {
+    // Hangman game win
+  }
 
-  // if doens't match word count
+  // if doesn't match word count
+  if (inCorrect == 0) {
+    // Hangman game over
+  }
+
 
 }
 
