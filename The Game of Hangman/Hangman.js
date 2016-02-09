@@ -33,7 +33,8 @@ function guessWord() {
       correct++;
       // highlight matching letter
 
-      
+      console.log("letter position: " + i);
+      console.log("letter : " + letter);
 
     }
   }
