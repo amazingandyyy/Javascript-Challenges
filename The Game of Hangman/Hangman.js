@@ -1,19 +1,13 @@
 //Hard code a big array of 100+ source words in your javascript, and pick a word randomly from that.
 
 $(document).ready(function() {
-    $("#btnGuess").click(function() {
-      var guessLetter1 = $("#guessLetter").val();
-    }
-
-  );
-
+    $("#btnGuess").click(guessWord);
 });
 
 var words = [
   'Olympic',
   'MLB',
   'FIFA'
-
 ];
 
 function gameStart(words) {
@@ -25,8 +19,8 @@ function gameStart(words) {
 function guessWord() {
 
   // input word
-
-    var letter = $('guessLetter').value;
+    var letter = $("#guessLetter").val();
+    console.log("letter: " + letter);
 
   // if match word
 
