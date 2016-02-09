@@ -2,8 +2,7 @@
 
 $(document).ready(function() {
     $("#btnGuess").click(function() {
-      var guessLetter1 = $("#guessLetter").value;
-      var guessLetter2 = $("#guessLetter").text;
+      var guessLetter1 = $("#guessLetter").val();
     }
 
   );
