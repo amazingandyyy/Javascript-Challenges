@@ -10,7 +10,7 @@ var words = [
   'MLB'
 ];
 
-var wordHolder = 0;
+var wordHolder = "";
 function gameStart(words) {
   // randomly pick of the words and init set to "-"
   for (var i=0; i < words[0].length; i++) {
@@ -36,6 +36,9 @@ function guessWord() {
 
       correct++;
       // highlight matching letter
+
+      wordHolder = wordHolder.substring(0, i) + letter + wordHolder.substring(i + 1, wordHolder.length + 1);
+      // wordHolder = wordHolder.substring();
 
       console.log("letter position: " + i);
       console.log("letter : " + letter);
@@ -63,5 +66,5 @@ function guessWord() {
 }
 
 // console.log(gameStart(words))
-
-guessWord();
+gameStart(words);
+// guessWord();
