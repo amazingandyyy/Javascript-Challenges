@@ -10,8 +10,12 @@ var words = [
   'MLB'
 ];
 
+var wordHolder = 0;
 function gameStart(words) {
-  // randomly pick of the words
+  // randomly pick of the words and init set to "-"
+  for (var i=0; i < words[0].length; i++) {
+    wordHolder+= "-";
+  }
   // Random function to use
   //
 }
