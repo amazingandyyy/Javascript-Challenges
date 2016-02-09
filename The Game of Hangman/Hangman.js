@@ -5,9 +5,9 @@ $(document).ready(function() {
 });
 
 var words = [
+  'FIFA',
   'Olympic',
-  'MLB',
-  'FIFA'
+  'MLB'
 ];
 
 function gameStart(words) {
@@ -19,10 +19,16 @@ function gameStart(words) {
 function guessWord() {
 
   // input word
-    var letter = $("#guessLetter").val();
-    console.log("letter: " + letter);
-
+  var letter = $("#guessLetter").val();
   // if match word
+  // for testing propose to choose words[0] word
+
+  var word = words[0];
+  for (var i=0; i < word.length; i++) {
+    if ( letter === word.substring(i, i + 1) ) {
+        console.log("letter2222: " + letter);
+    }
+  }
 
   // if doesn't match word
 
