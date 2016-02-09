@@ -33,6 +33,8 @@ function guessWord() {
       correct++;
       // highlight matching letter
 
+      
+
     }
   }
 
