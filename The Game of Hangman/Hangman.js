@@ -6,6 +6,7 @@
 // Use a library to add some cool animation when you win/lose the game.
 
 $(document).ready(function() {
+  gameStart(words);
   $("#btnGuess").click(guessWord);
 });
 
@@ -21,6 +22,9 @@ function gameStart(words) {
   for (var i=0; i < words[0].length; i++) {
     wordHolder+= "-";
   }
+
+  $("#guessWord").text(wordHolder);
+
   // Random function to use
   //
 }
@@ -42,10 +46,10 @@ function guessWord() {
       correct++;
       // highlight matching letter
       wordHolder = wordHolder.substring(0, i) + letter + wordHolder.substring(i + 1, wordHolder.length + 1);
-      // wordHolder = wordHolder.substring();
 
-      console.log("letter position: " + i);
-      console.log("letter : " + letter);
+      $("#guessWord").text(wordHolder);
+      // console.log("letter position: " + i);
+      // console.log("letter : " + letter);
     }
   }
 
@@ -67,8 +71,10 @@ function guessWord() {
 
   console.log("wordHolder: " + wordHolder);
 
+  $("#guessLetter").val("");
+
 }
 
 // console.log(gameStart(words))
-gameStart(words);
+// gameStart(words);
 // guessWord();
