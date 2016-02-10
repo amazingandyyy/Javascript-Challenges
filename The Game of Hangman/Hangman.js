@@ -1,7 +1,12 @@
-//Hard code a big array of 100+ source words in your javascript, and pick a word randomly from that.
+// Hard code a big array of 100+ source words in your javascript, and pick a word randomly from that.
+// Use jQuery and Bootstrap, for everything
+// Hard code a big array of 100+ source words in your javascript, and pick a word randomly from that.
+// Take the input directly from the user keyboard, and report it (used characters so far, wrong ones, ..) Don't take any input from the mouse.
+// If the user pressed a key for a character that has already been used, blink the screen
+// Use a library to add some cool animation when you win/lose the game.
 
 $(document).ready(function() {
-    $("#btnGuess").click(guessWord);
+  $("#btnGuess").click(guessWord);
 });
 
 var words = [
@@ -41,7 +46,6 @@ function guessWord() {
 
       console.log("letter position: " + i);
       console.log("letter : " + letter);
-
     }
   }
 
