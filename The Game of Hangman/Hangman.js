@@ -29,6 +29,7 @@ function gameStart(words) {
   //
 }
 
+var correct = 0, inCorrect = 0;
 function guessWord() {
 
   // input word
@@ -36,7 +37,7 @@ function guessWord() {
   // if match word
   // for testing propose to choose words[0] word
 
-  var correct = 0, inCorrect = 0;
+  // var correct = 0, inCorrect = 0;
   var word = words[0];
   inCorrect = word.length;
 
@@ -62,11 +63,13 @@ function guessWord() {
   // if match word count reached
   if (correct === word.length) {
     // Hangman game win
+    $("#hangmanGameDone").text("Hangman game win");
   }
 
   // if doesn't match word count
   if (inCorrect == 0) {
     // Hangman game over
+    $("#hangmanGameDone").text("Hangman game over");
   }
 
   console.log("wordHolder: " + wordHolder);
