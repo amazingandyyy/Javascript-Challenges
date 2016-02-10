@@ -64,12 +64,14 @@ function guessWord() {
   if (correct === word.length) {
     // Hangman game win
     $("#hangmanGameDone").text("Hangman game win");
+    console.log("hangmanGameDone:" + "Hangman game win");
   }
 
   // if doesn't match word count
   if (inCorrect == 0) {
     // Hangman game over
     $("#hangmanGameDone").text("Hangman game over");
+    console.log("hangmanGameDone:" + "Hangman game over");
   }
 
   console.log("wordHolder: " + wordHolder);
