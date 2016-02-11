@@ -11,9 +11,9 @@ $(document).ready(function() {
 });
 
 var words = [
-  'fifa',
-  'olympic',
-  'mlb'
+  'FIFA',
+  'Olympic',
+  'MLB'
 ];
 
 var wordHolder = "";
@@ -34,6 +34,7 @@ function guessWord() {
 
   // input word
   var letter = $("#guessLetter").val();
+  var pattern = RegExp(letter, "gi");
   // if match word
   // for testing propose to choose words[0] word
 
@@ -42,12 +43,16 @@ function guessWord() {
   inCorrect = word.length;
 
   for (var i=0; i < word.length; i++) {
-    if ( letter === word.substring(i, i + 1) ) {
+    // if ( letter === word.substring(i, i + 1) ) {
 
-      correct++;
-      // highlight matching letter
-      wordHolder = wordHolder.substring(0, i) + letter + wordHolder.substring(i + 1, wordHolder.length + 1);
-      $("#guessWord").text(wordHolder);
+    if (word.substring(i, i + 1).match(pattern) != null) {
+
+      if ( word.substring(i, i + 1).match(pattern).length > 0 ) {
+        correct++;
+        // highlight matching letter
+        wordHolder = wordHolder.substring(0, i) + letter + wordHolder.substring(i + 1, wordHolder.length + 1);
+        $("#guessWord").text(wordHolder);
+      }
     }
   }
 
