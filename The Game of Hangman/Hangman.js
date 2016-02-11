@@ -7,7 +7,7 @@
 
 $(document).ready(function() {
   // gameStart(words);
-  gameStart(gameList[0]);
+  gameStart(gameList[1]);
   $("#btnGuess").click(guessWord);
 });
 
@@ -46,7 +46,7 @@ function guessWord() {
   // for testing propose to choose words[0] word
 
   // var correct = 0, inCorrect = 0;
-  var word = gameList[0].name;
+  var word = gameList[1].name;
   inCorrect = word.length;
 
   for (var i=0; i < word.length; i++) {
