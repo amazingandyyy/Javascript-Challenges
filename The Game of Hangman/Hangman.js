@@ -6,7 +6,8 @@
 // Use a library to add some cool animation when you win/lose the game.
 
 $(document).ready(function() {
-  gameStart(words);
+  // gameStart(words);
+  gameStart(gameList[0].name);
   $("#btnGuess").click(guessWord);
 });
 
@@ -15,16 +16,16 @@ var gameList = [
     { name: 'MLB', hint: 'Baseball' }
 ];
 
-var words = [
-  'FIFA',
-  'Olympic',
-  'MLB'
-];
+// var words = [
+//   'FIFA',
+//   'Olympic',
+//   'MLB'
+// ];
 
 var wordHolder = "";
 function gameStart(words) {
   // randomly pick of the words and init set to "-"
-  for (var i=0; i < words[0].length; i++) {
+  for (var i=0; i < words.length; i++) {
     wordHolder+= "-";
   }
 
@@ -44,7 +45,7 @@ function guessWord() {
   // for testing propose to choose words[0] word
 
   // var correct = 0, inCorrect = 0;
-  var word = words[0];
+  var word = gameList[0].name;
   inCorrect = word.length;
 
   for (var i=0; i < word.length; i++) {
