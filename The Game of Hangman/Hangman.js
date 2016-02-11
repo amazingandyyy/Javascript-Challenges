@@ -10,6 +10,11 @@ $(document).ready(function() {
   $("#btnGuess").click(guessWord);
 });
 
+var gameList = [
+    { name: 'FIFA', hint: 'Soccer or Football' },
+    { name: 'MLB', hint: 'Baseball' }
+];
+
 var words = [
   'FIFA',
   'Olympic',
