@@ -7,7 +7,7 @@
 
 $(document).ready(function() {
   // gameStart(words);
-  gameStart(gameList[1]);
+  gameStart();
   $("#btnGuess").click(guessWord);
 });
 
@@ -22,9 +22,13 @@ var gameList = [
 //   'MLB'
 // ];
 
+var words = "";
 var wordHolder = "";
-function gameStart(words) {
+function gameStart() {
   // randomly pick of the words and init set to "-"
+  // words = gameList[Math.floor(Math.random() * gameList.length + 1)];
+  words = gameList[0];
+
   for (var i=0; i < words.name.length; i++) {
     wordHolder+= "-";
   }
@@ -46,8 +50,9 @@ function guessWord() {
   // for testing propose to choose words[0] word
 
   // var correct = 0, inCorrect = 0;
-  var word = gameList[1].name;
-  inCorrect = word.length;
+  // var word = gameList[1].name;
+  var word = words.name;
+  inCorrect = word.name.length;
 
   for (var i=0; i < word.length; i++) {
     // if ( letter === word.substring(i, i + 1) ) {
