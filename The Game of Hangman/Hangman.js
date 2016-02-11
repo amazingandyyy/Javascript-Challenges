@@ -7,7 +7,7 @@
 
 $(document).ready(function() {
   // gameStart(words);
-  gameStart(gameList[0].name);
+  gameStart(gameList[0]);
   $("#btnGuess").click(guessWord);
 });
 
@@ -25,13 +25,14 @@ var gameList = [
 var wordHolder = "";
 function gameStart(words) {
   // randomly pick of the words and init set to "-"
-  for (var i=0; i < words.length; i++) {
+  for (var i=0; i < words.name.length; i++) {
     wordHolder+= "-";
   }
 
   $("#guessWord").text(wordHolder);
+  $("#hint").text(words.hint);
 
-  // Random function to use
+  // Random function to useh
   //
 }
 
