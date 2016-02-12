@@ -40,9 +40,9 @@ function gameStart() {
   //
 }
 
-var correct = 0, inCorrect = 0;
-function gameStagingOne() {
 
+function gameStagingOne() {
+  var correct = 0, inCorrect = 0;
   // input word
   var letter = $("#inputLetter").val();
 
