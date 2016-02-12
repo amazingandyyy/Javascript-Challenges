@@ -45,6 +45,12 @@ function gameStagingOne() {
 
   // input word
   var letter = $("#inputLetter").val();
+
+  if($('#inputLetter').val() == ''){
+     alert('Input can not be left blank');
+     return;
+  }
+
   var pattern = RegExp(letter, "gi");
   // if match word
   // for testing propose to choose hangmanObj[0] word
@@ -75,8 +81,8 @@ function gameStagingOne() {
   }
 
   // if match word count reached
-  if (correct === word.length) {
-    // Hangman game win
+  if (correct > 0 && correct === word.length) {
+    // Hangman game win > 0
     $("#hangmanGameDone").text("Hangman game win");
   }
 
