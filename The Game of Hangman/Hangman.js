@@ -71,14 +71,16 @@ function gameStagingOne() {
         wordHolder = wordHolder.substring(0, i) + letter + wordHolder.substring(i + 1, wordHolder.length + 1);
         $("#answerWord").text(wordHolder);
       }
+    } else {
+      inCorrect--;
     }
   }
 
   // if doesn't match word
-  if (correct == 0) {
-    inCorrect--;
-    // pic roation in Hangman
-  }
+  // if (correct == 0) {
+  //   inCorrect--;
+  //   // pic roation in Hangman
+  // }
 
   // if match word count reached
   if (correct > 0 && correct === word.length) {
