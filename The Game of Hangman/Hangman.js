@@ -8,7 +8,7 @@
 $(document).ready(function() {
   // gameStart(words);
   gameStart();
-  $("#btnGuess").click(guessWord);
+  $("#btnGuess").click(gameStagingOne);
 });
 
 var gameList = [
@@ -22,37 +22,37 @@ var gameList = [
 //   'MLB'
 // ];
 
-var words = "";
+var hangmanObj = "";
 var wordHolder = "";
 function gameStart() {
-  // randomly pick of the words and init set to "-"
-  // words = gameList[Math.floor(Math.random() * gameList.length + 1)];
-  words = gameList[0];
+  // randomly pick of the hangmanObj and init set to "-"
+  // hangmanObj = gameList[Math.floor(Math.random() * gameList.length + 1)];
+  hangmanObj = gameList[0];
 
-  for (var i=0; i < words.name.length; i++) {
+  for (var i=0; i < hangmanObj.name.length; i++) {
     wordHolder+= "-";
   }
 
-  $("#guessWord").text(wordHolder);
-  $("#hint").text(words.hint);
+  $("#answerWord").text(wordHolder);
+  $("#hint").text(hangmanObj.hint);
 
   // Random function to useh
   //
 }
 
 var correct = 0, inCorrect = 0;
-function guessWord() {
+function gameStagingOne() {
 
   // input word
-  var letter = $("#guessLetter").val();
+  var letter = $("#inputLetter").val();
   var pattern = RegExp(letter, "gi");
   // if match word
-  // for testing propose to choose words[0] word
+  // for testing propose to choose hangmanObj[0] word
 
   // var correct = 0, inCorrect = 0;
   // var word = gameList[1].name;
-  var word = words.name;
-  inCorrect = word.name.length;
+  var word = hangmanObj.name;
+  inCorrect = word.length;
 
   for (var i=0; i < word.length; i++) {
     // if ( letter === word.substring(i, i + 1) ) {
@@ -63,7 +63,7 @@ function guessWord() {
         correct++;
         // highlight matching letter
         wordHolder = wordHolder.substring(0, i) + letter + wordHolder.substring(i + 1, wordHolder.length + 1);
-        $("#guessWord").text(wordHolder);
+        $("#answerWord").text(wordHolder);
       }
     }
   }
@@ -88,10 +88,10 @@ function guessWord() {
 
   console.log("wordHolder: " + wordHolder);
 
-  $("#guessLetter").val("");
+  $("#inputLetter").val("");
 
 }
 
-// console.log(gameStart(words))
-// gameStart(words);
+// console.log(gameStart(hangmanObj))
+// gameStart(hangmanObj);
 // guessWord();
