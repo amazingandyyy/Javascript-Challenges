@@ -8,7 +8,8 @@
 $(document).ready(function() {
   // gameStart(words);
   gameStart();
-  $("#btnGuess").click(gameStagingOne);
+  // $("#btnGuess").click(gameStagingOne);
+  $("#inputLetter").keydown(gameStagingOne);
 
 });
 
@@ -165,10 +166,10 @@ function gameStagingOne() {
               // replace matching css
 
               $('#alphabetLabel').text('');
-              alphabetArray[index] = letter.toLowerCase();
+              // alphabetArray[index] = letter.toLowerCase();
+              alphabetArray[index] = '';
               $.each(alphabetArray, function(itemIndex) {
                 $('#alphabetLabel').append(alphabetArray[itemIndex] + ' ');
-                console.log('index: ' + index);
                 // $('#alphabetLabel').append('<span class="alphabetClass">' + alphabetArray[itemIndex] + '</span>').css('color', 'blue').css('font-weight', 'bold').css('background-color', '#F9F3F3');
               });
 
@@ -213,6 +214,7 @@ function gameStagingOne() {
   console.log("wordHolder: " + wordHolder);
 
   $("#inputLetter").val("");
+  $("#inputLetter").focus();
 
 }
 
