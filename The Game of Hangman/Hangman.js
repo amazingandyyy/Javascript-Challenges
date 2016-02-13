@@ -14,10 +14,10 @@ $(document).ready(function() {
 
 
 var alphabetArray = [
-  'a', 'b', 'c', 'd', 'e', 'f', 'g',
-  'h', 'i', 'j', 'k', 'l', 'm', 'n',
-  'o', 'p', 'q', 'r', 's', 't', 'u',
-  'v', 'w', 'x', 'y', 'z'
+  'A', 'B', 'C', 'D', 'E', 'F', 'G',
+  'H', 'I', 'J', 'K', 'L', 'M', 'N',
+  'O', 'P', 'Q', 'R', 'S', 'T', 'U',
+  'V', 'W', 'X', 'Y', 'Z'
 ];
 
 
@@ -108,10 +108,8 @@ function gameStart() {
   // }
 
   $.each(alphabetArray, function(index) {
-    $('#alphabetLabel').append(alphabetArray[index]);
+    $('#alphabetLabel').append(alphabetArray[index] + ' ');
   });
-
-
 
   // randomly pick of the hangmanObj and init set to "-"
   hangmanObj = gameList[Math.floor(Math.random() * gameList.length)];
@@ -129,6 +127,7 @@ function gameStart() {
 }
 
 var inCorrect = 5;
+var letterMatching = [];
 function gameStagingOne() {
   var correct = 0
   // input word
@@ -158,6 +157,15 @@ function gameStagingOne() {
         // highlight matching letter
         wordHolder = wordHolder.substring(0, i) + letter + wordHolder.substring(i + 1, wordHolder.length + 1);
         $("#answerWord").text(wordHolder);
+        letterMatching.push = letter;
+        $.each(alphabetArray, function(index) {
+            if(alphabetArray[index].toLowerCase() == letter.toLowerCase()) {
+              console.log('matting letter: ' + letter);
+              // $('#alphabetLabel').html();
+            }
+
+          // $('#alphabetLabel').append(alphabetArray[index] + ' ');
+        });
       }
     }
   }
