@@ -160,16 +160,29 @@ function gameStagingOne() {
         letterMatching.push = letter;
         $.each(alphabetArray, function(index) {
             if(alphabetArray[index].toLowerCase() == letter.toLowerCase()) {
-              // console.log('matching index: ' + index);
-              // console.log('matching letter: ' + letter);
-              // console.log('matching letter: ' + $('#alphabetLabel').html());
 
-              // $('#alphabetLabel').text('');
-              // $.each(alphabetArray, function(itemIndex) {
-              //   $('#alphabetLabel').append(alphabetArray[itemIndex] + ' ');
-              //   console.log('index: ' + index);
-              //   // $('#alphabetLabel').append('<span class="alphabetClass">' + alphabetArray[itemIndex] + '</span>').css('color', 'blue').css('font-weight', 'bold').css('background-color', '#F9F3F3');
-              // });
+              console.log('Matching index: ' + index);
+              // replace matching css
+
+              $('#alphabetLabel').text('');
+              alphabetArray[index] = letter.toLowerCase();
+              $.each(alphabetArray, function(itemIndex) {
+                $('#alphabetLabel').append(alphabetArray[itemIndex] + ' ');
+                console.log('index: ' + index);
+                // $('#alphabetLabel').append('<span class="alphabetClass">' + alphabetArray[itemIndex] + '</span>').css('color', 'blue').css('font-weight', 'bold').css('background-color', '#F9F3F3');
+              });
+
+// console.log('matching letter: ' + $('#alphabetLabel').html());
+// $('#alphabetLabel').text('');
+// $.each(alphabetArray, function(itemIndex) {
+//   $('#alphabetLabel').append(alphabetArray[itemIndex] + ' ');
+//   console.log('index: ' + index);
+//   // $('#alphabetLabel').append('<span class="alphabetClass">' + alphabetArray[itemIndex] + '</span>').css('color', 'blue').css('font-weight', 'bold').css('background-color', '#F9F3F3');
+// });
+
+            } else {
+
+              console.log('Unmatching index: ' + index);
 
             }
 
