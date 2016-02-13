@@ -40,9 +40,9 @@ function gameStart() {
   //
 }
 
-
+var inCorrect = 5;
 function gameStagingOne() {
-  var correct = 0, inCorrect = 0;
+  var correct = 0
   // input word
   var letter = $("#inputLetter").val();
 
@@ -57,33 +57,31 @@ function gameStagingOne() {
 
   // var correct = 0, inCorrect = 0;
   // var word = gameList[1].name;
-  var word = hangmanObj.name;
-  inCorrect = word.length;
+  var hangmanName = hangmanObj.name;
+  // inCorrect = word.length;
 
-  for (var i=0; i < word.length; i++) {
+  for (var i=0; i < hangmanName.length; i++) {
     // if ( letter === word.substring(i, i + 1) ) {
 
-    if (word.substring(i, i + 1).match(pattern) != null) {
+    if (hangmanName.substring(i, i + 1).match(pattern) != null) {
 
-      if ( word.substring(i, i + 1).match(pattern).length > 0 ) {
+      if ( hangmanName.substring(i, i + 1).match(pattern).length > 0 ) {
         correct++;
         // highlight matching letter
         wordHolder = wordHolder.substring(0, i) + letter + wordHolder.substring(i + 1, wordHolder.length + 1);
         $("#answerWord").text(wordHolder);
       }
-    } else {
-      inCorrect--;
     }
   }
 
   // if doesn't match word
-  // if (correct == 0) {
-  //   inCorrect--;
-  //   // pic roation in Hangman
-  // }
+  if (correct == 0) {
+    inCorrect--;
+    // pic roation in Hangman
+  }
 
   // if match word count reached
-  if (correct > 0 && correct === word.length) {
+  if (wordHolder.toLowerCase() === hangmanName.toLowerCase()) {
     // Hangman game win > 0
     $("#hangmanGameDone").text("Hangman game win");
   }
