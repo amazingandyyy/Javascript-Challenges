@@ -162,10 +162,10 @@ function gameStagingOne() {
             if(alphabetArray[index].toLowerCase() == letter.toLowerCase()) {
               // console.log('matching letter: ' + letter);
               console.log('matching letter: ' + $('#alphabetLabel').html());
-
+            
+              $('#alphabetLabel').text('');
               $.each(alphabetArray, function(index) {
-                $('#alphabetLabel').text('');
-                $('#alphabetLabel').append(alphabetArray[index] + ' ');
+                $('#alphabetLabel').append('<span class="alphabetClass">' + alphabetArray[index] + ' </span>').css('color', 'green');
               });
 
               // $.each(baller, function(index) {
