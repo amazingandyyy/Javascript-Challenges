@@ -9,7 +9,17 @@ $(document).ready(function() {
   // gameStart(words);
   gameStart();
   $("#btnGuess").click(gameStagingOne);
+
 });
+
+
+var alphabetArray = [
+  'a', 'b', 'c', 'd', 'e', 'f', 'g',
+  'h', 'i', 'j', 'k', 'l', 'm', 'n',
+  'o', 'p', 'q', 'r', 's', 't', 'u',
+  'v', 'w', 'x', 'y', 'z'
+];
+
 
 var gameList = [
   { name: 'FIFA', hint: 'Soccer or Football' },
@@ -88,16 +98,21 @@ var gameList = [
 
 ];
 
-var alphabetList = [
-  'a', 'b', 'c', 'd', 'e', 'f', 'g',
-  'h', 'i', 'j', 'k', 'l', 'm', 'n',
-  'o', 'p', 'q', 'r', 's', 't', 'u',
-  'v', 'w', 'x', 'y', 'z'
-];
-
 var hangmanObj = "";
 var wordHolder = "";
 function gameStart() {
+  // alphabet put on the UI
+
+  // for (var i=0; i < alphabetArray.length; i++) {
+  //     $('#alphabetLabel').append(alphabetArray[i]);
+  // }
+
+  $.each(alphabetArray, function(index) {
+    $('#alphabetLabel').append(alphabetArray[index]);
+  });
+
+
+
   // randomly pick of the hangmanObj and init set to "-"
   hangmanObj = gameList[Math.floor(Math.random() * gameList.length)];
   // hangmanObj = gameList[0];
