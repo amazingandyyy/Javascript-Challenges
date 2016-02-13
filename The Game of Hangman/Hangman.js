@@ -160,20 +160,16 @@ function gameStagingOne() {
         letterMatching.push = letter;
         $.each(alphabetArray, function(index) {
             if(alphabetArray[index].toLowerCase() == letter.toLowerCase()) {
+              // console.log('matching index: ' + index);
               // console.log('matching letter: ' + letter);
-              console.log('matching letter: ' + $('#alphabetLabel').html());
+              // console.log('matching letter: ' + $('#alphabetLabel').html());
 
-              $('#alphabetLabel').text('');
-              $.each(alphabetArray, function(index) {
-                $('#alphabetLabel').append('<span class="alphabetClass">' + alphabetArray[index] + ' </span>').css('color', 'blue').css('font-weight', 'bold').css('background-color' , '#F9F3F3');
-              });
-
-              // $.each(baller, function(index) {
-              //    $('.words').append('<span class="dash' + index +
-              //        '">____   </span>')
-              //      .css(
-              //        'color', "#FFF8DD");
-              //  });
+              // $('#alphabetLabel').text('');
+              // $.each(alphabetArray, function(itemIndex) {
+              //   $('#alphabetLabel').append(alphabetArray[itemIndex] + ' ');
+              //   console.log('index: ' + index);
+              //   // $('#alphabetLabel').append('<span class="alphabetClass">' + alphabetArray[itemIndex] + '</span>').css('color', 'blue').css('font-weight', 'bold').css('background-color', '#F9F3F3');
+              // });
 
             }
 
