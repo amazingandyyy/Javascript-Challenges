@@ -9,7 +9,7 @@ $(document).ready(function() {
   // gameStart(words);
   gameStart();
   // $("#btnGuess").click(gameStagingOne);
-  $("#inputLetter").keydown(gameStagingOne);
+  $("#inputLetter").keyup(gameStagingOne);
 
 });
 
@@ -134,7 +134,7 @@ function gameStagingOne() {
   // input word
   var letter = $("#inputLetter").val();
 
-  if($('#inputLetter').val() == ''){
+  if($('#inputLetter').val() == '') {
      alert('Input can not be left blank');
      return;
   }
@@ -167,7 +167,7 @@ function gameStagingOne() {
 
               $('#alphabetLabel').text('');
               // alphabetArray[index] = letter.toLowerCase();
-              alphabetArray[index] = '';
+              alphabetArray[index] = letter.toLowerCase();
               $.each(alphabetArray, function(itemIndex) {
                 $('#alphabetLabel').append(alphabetArray[itemIndex] + ' ');
                 // $('#alphabetLabel').append('<span class="alphabetClass">' + alphabetArray[itemIndex] + '</span>').css('color', 'blue').css('font-weight', 'bold').css('background-color', '#F9F3F3');
