@@ -10,7 +10,6 @@ $(document).ready(function() {
   gameStart();
   // $("#btnGuess").click(gameStagingOne);
   $("#inputLetter").keyup(gameStagingOne);
-
 });
 
 
@@ -104,10 +103,6 @@ var wordHolder = "";
 function gameStart() {
   // alphabet put on the UI
 
-  // for (var i=0; i < alphabetArray.length; i++) {
-  //     $('#alphabetLabel').append(alphabetArray[i]);
-  // }
-
   $.each(alphabetArray, function(index) {
     $('#alphabetLabel').append(alphabetArray[index] + ' ');
   });
@@ -123,8 +118,6 @@ function gameStart() {
   $("#answerWord").text(wordHolder);
   $("#hint").text(hangmanObj.hint);
 
-  // Random function to useh
-  //
 }
 
 var inCorrect = 5;
@@ -133,6 +126,57 @@ function gameStagingOne() {
   var correct = 0
   // input word
   var letter = $("#inputLetter").val();
+
+  // character that has already been used
+  // 1) check letterMatching array before push letter
+  // 2) if letter are already in use return with msg
+  // 3) if not push to array
+
+  //   $.each(alphabetArray, function(index) { } );
+
+  if (letterMatching.length === 0) {
+    letterMatching.push(letter);
+  } else {
+
+    var matchingCount = 0;
+    for(var i=0; i < letterMatching.length; i++) {
+      if (letterMatching[i] === letter) {
+        matchingCount++;
+      }
+    }
+
+    if (matchingCount > 0) {
+      matchingCount = 0;
+    } else {
+      letterMatching.push(letter);
+    }
+
+  }
+
+
+  // $.each(letterMatching, function(index) {
+  //   if (letterMatching[index] == letter) {
+  //     alert('letter that has already been used');
+  //   } else {
+  //     letterMatching.push = letter;
+  //   }
+  // });
+
+  // var a = [1,2,3], b = [4,1,5,2];
+  // b.forEach(function(value){
+  //   if (a.indexOf(value)==-1) a.push(value);
+  // });
+  // $.each(b,function(value){
+  //   if ($.inArray(value,a)==-1) a.push(value);
+  // });
+
+  // $.each(letterMatching, function(value){
+  //   if ($.inArray(value, letter)==-1) {
+  //     letterMatching.push(value);
+  //   }
+  // });
+
+
 
   if($('#inputLetter').val() == '') {
      alert('Input can not be left blank');
@@ -155,10 +199,10 @@ function gameStagingOne() {
 
       if ( hangmanName.substring(i, i + 1).match(pattern).length > 0 ) {
         correct++;
-        // highlight matching letter
+        // matching letter
         wordHolder = wordHolder.substring(0, i) + letter + wordHolder.substring(i + 1, wordHolder.length + 1);
         $("#answerWord").text(wordHolder);
-        letterMatching.push = letter;
+
         $.each(alphabetArray, function(index) {
             if(alphabetArray[index].toLowerCase() == letter.toLowerCase()) {
 
