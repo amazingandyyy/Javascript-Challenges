@@ -139,11 +139,18 @@ function gameStagingOne() {
   } else {
 
     var matchingCount = 0;
-    for(var i=0; i < letterMatching.length; i++) {
-      if (letterMatching[i] === letter) {
-        matchingCount++;
+    // for(var i=0; i < letterMatching.length; i++) {
+    //   if (letterMatching[i] === letter) {
+    //     matchingCount++;
+    //   }
+    // }
+    // Same behaviour replace to jquery
+    $.each(letterMatching, function(index) {
+      if (letterMatching[index] == letter) {
+          matchingCount++;
       }
-    }
+    });
+
 
     if (matchingCount > 0) {
       matchingCount = 0;
