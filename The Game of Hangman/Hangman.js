@@ -151,39 +151,14 @@ function gameStagingOne() {
       }
     });
 
-
     if (matchingCount > 0) {
       matchingCount = 0;
+      alert('A letter has already been used');
     } else {
       letterMatching.push(letter);
     }
 
   }
-
-
-  // $.each(letterMatching, function(index) {
-  //   if (letterMatching[index] == letter) {
-  //     alert('letter that has already been used');
-  //   } else {
-  //     letterMatching.push = letter;
-  //   }
-  // });
-
-  // var a = [1,2,3], b = [4,1,5,2];
-  // b.forEach(function(value){
-  //   if (a.indexOf(value)==-1) a.push(value);
-  // });
-  // $.each(b,function(value){
-  //   if ($.inArray(value,a)==-1) a.push(value);
-  // });
-
-  // $.each(letterMatching, function(value){
-  //   if ($.inArray(value, letter)==-1) {
-  //     letterMatching.push(value);
-  //   }
-  // });
-
-
 
   if($('#inputLetter').val() == '') {
      alert('Input can not be left blank');
