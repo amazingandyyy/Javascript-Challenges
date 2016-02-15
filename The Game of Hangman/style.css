@@ -10,3 +10,8 @@ body {
 #alphabetLabel {
   margin-top: 4%;
 }
+
+.gameOver {
+  background-color: #BFE6DD;
+  margin-top: 4%;
+}

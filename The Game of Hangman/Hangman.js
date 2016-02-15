@@ -153,11 +153,13 @@ function gameStagingOne() {
 
     if (matchingCount > 0) {
       matchingCount = 0;
-      alert('A letter has already been used');
+
+      $('.container').fadeTo(100, 0.1).fadeTo(200, 1.0);
+
+      console.log('A letter has already been used');
     } else {
       letterMatching.push(letter);
     }
-
   }
 
   if($('#inputLetter').val() == '') {
@@ -235,6 +237,7 @@ function gameStagingOne() {
   if (inCorrect == 0) {
     // Hangman game over
     $("#hangmanGameDone").text("Hangman game over");
+    $("#hangmanGameDone").addClass('gameOver');
   }
 
   console.log("wordHolder: " + wordHolder);
