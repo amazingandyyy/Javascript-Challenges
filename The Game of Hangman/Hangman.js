@@ -96,6 +96,20 @@ var gameList = [
 
 ];
 
+var images = [
+  'http://imgur.com/uXuNZP8',
+  'http://imgur.com/lXlEark',
+  'http://imgur.com/mADLZk6',
+  'http://imgur.com/u6qmUYf',
+  'http://imgur.com/px4T2nx',
+  'http://imgur.com/k4to8KG',
+  'http://imgur.com/ABWpkEE',
+  'http://imgur.com/9A5QxbG',
+  'http://imgur.com/0plmx6C',
+  'http://imgur.com/2kvMz9g',
+  'http://imgur.com/LOKOiyC'
+];
+
 var hangmanObj = "";
 var wordHolder = "";
 function gameStart() {
