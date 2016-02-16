@@ -12,14 +12,12 @@ $(document).ready(function() {
   $("#inputLetter").keyup(gameStagingOne);
 });
 
-
 var alphabetArray = [
   'A', 'B', 'C', 'D', 'E', 'F', 'G',
   'H', 'I', 'J', 'K', 'L', 'M', 'N',
   'O', 'P', 'Q', 'R', 'S', 'T', 'U',
   'V', 'W', 'X', 'Y', 'Z'
 ];
-
 
 var gameList = [
   { name: 'FIFA', hint: 'Soccer or Football' },
