@@ -238,8 +238,10 @@ function gameStagingOne() {
     inCorrect--;
     // pic roation in Hangman
 
-    //  var url = document.getElementById("hangmangImage").src = "http://fetlar.kingston.ac.uk/pp/hangman" + inCorrect + ".jpg";
-     var url = document.getElementById("hangmangImage").src = images[inCorrect];
+     var url = document.getElementById("hangmangImage").src = "https://raw.githubusercontent.com/march-dave/Javascript-Challenges/master/The%20Game%20of%20Hangman/Images/hang" + inCorrect + ".gif";
+    //  var url = document.getElementById("hangmangImage").src = images[inCorrect];
+
+    //  https://raw.githubusercontent.com/march-dave/Javascript-Challenges/master/The%20Game%20of%20Hangman/Images/hang10.gif
   }
 
   // if match word count reached
