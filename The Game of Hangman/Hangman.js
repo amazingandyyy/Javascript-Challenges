@@ -237,6 +237,9 @@ function gameStagingOne() {
   if (correct == 0) {
     inCorrect--;
     // pic roation in Hangman
+
+    //  var url = document.getElementById("hangmangImage").src = "http://fetlar.kingston.ac.uk/pp/hangman" + inCorrect + ".jpg";
+     var url = document.getElementById("hangmangImage").src = images[inCorrect];
   }
 
   // if match word count reached
