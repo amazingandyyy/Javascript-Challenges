@@ -5,13 +5,6 @@
 // If the user pressed a key for a character that has already been used, blink the screen
 // Use a library to add some cool animation when you win/lose the game.
 
-$(document).ready(function() {
-  // gameStart(words);
-  gameStart();
-  // $("#btnGuess").click(gameStagingOne);
-  $("#inputLetter").keyup(gameStagingOne);
-});
-
 var alphabetArray = [
   'A', 'B', 'C', 'D', 'E', 'F', 'G',
   'H', 'I', 'J', 'K', 'L', 'M', 'N',
@@ -98,6 +91,15 @@ var gameList = [
 
 var hangmanObj = "";
 var wordHolder = "";
+
+$(document).ready(function() {
+  // gameStart(words);
+  gameStart();
+  // $("#btnGuess").click(gameStagingOne);
+  $("#inputLetter").keyup(gameStagingOne);
+});
+
+
 function gameStart() {
   // alphabet put on the UI
 
@@ -130,19 +132,12 @@ function gameStagingOne() {
   // 2) if letter are already in use return with msg
   // 3) if not push to array
 
-  //   $.each(alphabetArray, function(index) { } );
-
   if (letterMatching.length === 0) {
     letterMatching.push(letter);
   } else {
 
     var matchingCount = 0;
-    // for(var i=0; i < letterMatching.length; i++) {
-    //   if (letterMatching[i] === letter) {
-    //     matchingCount++;
-    //   }
-    // }
-    // Same behaviour replace to jquery
+
     $.each(letterMatching, function(index) {
       if (letterMatching[index] == letter) {
           matchingCount++;
@@ -152,8 +147,9 @@ function gameStagingOne() {
     if (matchingCount > 0) {
       matchingCount = 0;
 
-      $('.container').fadeTo(100, 0.1).fadeTo(200, 1.0);
+      return;
 
+      $('.container').fadeTo(100, 0.1).fadeTo(200, 1.0);
       console.log('A letter has already been used');
     } else {
       letterMatching.push(letter);
@@ -211,17 +207,14 @@ function gameStagingOne() {
 
   // if doesn't match word
   if (correct == 0) {
-    // pic roation in Hangman
+    // pic roation Hangman images
      var url = document.getElementById("hangmangImage").src = "https://raw.githubusercontent.com/march-dave/Javascript-Challenges/master/The%20Game%20of%20Hangman/Images/hang" + inCorrect + ".gif";
 
     inCorrect--;
-    //  var url = document.getElementById("hangmangImage").src = images[inCorrect];
-    //  https://raw.githubusercontent.com/march-dave/Javascript-Challenges/master/The%20Game%20of%20Hangman/Images/hang10.gif
   }
 
-  // if match word count reached
+  // if word count match reached
   if (wordHolder.toLowerCase() === hangmanName.toLowerCase()) {
-    // Hangman game win > 0
     $("#hangmanGameDone").text("Hangman game win");
 
      var url = document.getElementById("hangmangOver").src = "https://raw.githubusercontent.com/march-dave/Javascript-Challenges/master/The%20Game%20of%20Hangman/Images/hangmanwin.png";
@@ -234,7 +227,6 @@ function gameStagingOne() {
     $("#hangmanGameDone").addClass('gameOver');
 
      var url = document.getElementById("hangmangOver").src = "https://raw.githubusercontent.com/march-dave/Javascript-Challenges/master/The%20Game%20of%20Hangman/Images/hangmanlose.png";
-
   }
 
   console.log("wordHolder: " + wordHolder);
@@ -243,7 +235,3 @@ function gameStagingOne() {
   $("#inputLetter").focus();
 
 }
-
-// console.log(gameStart(hangmanObj))
-// gameStart(hangmanObj);
-// guessWord();
