@@ -213,18 +213,8 @@ function gameStagingOne() {
                 // $('#alphabetLabel').append('<span class="alphabetClass">' + alphabetArray[itemIndex] + '</span>').css('color', 'blue').css('font-weight', 'bold').css('background-color', '#F9F3F3');
               });
 
-// console.log('matching letter: ' + $('#alphabetLabel').html());
-// $('#alphabetLabel').text('');
-// $.each(alphabetArray, function(itemIndex) {
-//   $('#alphabetLabel').append(alphabetArray[itemIndex] + ' ');
-//   console.log('index: ' + index);
-//   // $('#alphabetLabel').append('<span class="alphabetClass">' + alphabetArray[itemIndex] + '</span>').css('color', 'blue').css('font-weight', 'bold').css('background-color', '#F9F3F3');
-// });
-
             } else {
-
               console.log('Unmatching index: ' + index);
-
             }
 
           // $('#alphabetLabel').append(alphabetArray[index] + ' ');
@@ -235,12 +225,11 @@ function gameStagingOne() {
 
   // if doesn't match word
   if (correct == 0) {
-    inCorrect--;
     // pic roation in Hangman
-
      var url = document.getElementById("hangmangImage").src = "https://raw.githubusercontent.com/march-dave/Javascript-Challenges/master/The%20Game%20of%20Hangman/Images/hang" + inCorrect + ".gif";
-    //  var url = document.getElementById("hangmangImage").src = images[inCorrect];
 
+    inCorrect--;
+    //  var url = document.getElementById("hangmangImage").src = images[inCorrect];
     //  https://raw.githubusercontent.com/march-dave/Javascript-Challenges/master/The%20Game%20of%20Hangman/Images/hang10.gif
   }
 
