@@ -132,7 +132,7 @@ function gameStart() {
 
 }
 
-var inCorrect = 5;
+var inCorrect = 10;
 var letterMatching = [];
 function gameStagingOne() {
   var correct = 0
