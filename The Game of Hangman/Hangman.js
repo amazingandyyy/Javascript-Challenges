@@ -237,6 +237,8 @@ function gameStagingOne() {
   if (wordHolder.toLowerCase() === hangmanName.toLowerCase()) {
     // Hangman game win > 0
     $("#hangmanGameDone").text("Hangman game win");
+
+     var url = document.getElementById("hangmangOver").src = "https://raw.githubusercontent.com/march-dave/Javascript-Challenges/master/The%20Game%20of%20Hangman/Images/hangmanwin.png";
   }
 
   // if doesn't match word count
@@ -244,6 +246,9 @@ function gameStagingOne() {
     // Hangman game over
     $("#hangmanGameDone").text("Hangman game over");
     $("#hangmanGameDone").addClass('gameOver');
+
+     var url = document.getElementById("hangmangOver").src = "https://raw.githubusercontent.com/march-dave/Javascript-Challenges/master/The%20Game%20of%20Hangman/Images/hangmanlose.png";
+
   }
 
   console.log("wordHolder: " + wordHolder);
