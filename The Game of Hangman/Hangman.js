@@ -170,10 +170,10 @@ function gameStagingOne() {
             if(alphabetArray[index].toLowerCase() == letter.toLowerCase()) {
 
               console.log('Matching index: ' + index);
-              // replace matching css
 
               $('#alphabetLabel').text('');
-              alphabetArray[index] = letter.toLowerCase();
+              // alphabetArray[index] = letter.toLowerCase();
+              alphabetArray[index] = ' ';
               $.each(alphabetArray, function(itemIndex) {
                 $('#alphabetLabel').append(alphabetArray[itemIndex] + ' ');
                 // $('#alphabetLabel').append('<span class="alphabetClass">' + alphabetArray[itemIndex] + '</span>').css('color', 'blue').css('font-weight', 'bold').css('background-color', '#F9F3F3');
