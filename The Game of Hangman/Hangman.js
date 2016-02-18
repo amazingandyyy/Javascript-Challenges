@@ -190,6 +190,33 @@ function gameStagingOne() {
     }
   }
 
+
+  // for (var i=0; i < hangmanName.length; i++) {
+  //       // matching letter
+  //       wordHolder = wordHolder.substring(0, i) + letter + wordHolder.substring(i + 1, wordHolder.length + 1);
+  //       $("#answerWord").text(wordHolder);
+  //
+  //       $.each(alphabetArray, function(index) {
+  //           if(alphabetArray[index].toLowerCase() == letter.toLowerCase()) {
+  //
+  //             console.log('Matching index: ' + index);
+  //
+  //             $('#alphabetLabel').text('');
+  //             // alphabetArray[index] = letter.toLowerCase();
+  //             alphabetArray[index] = ' ';
+  //             $.each(alphabetArray, function(itemIndex) {
+  //               $('#alphabetLabel').append(alphabetArray[itemIndex] + ' ');
+  //               // $('#alphabetLabel').append('<span class="alphabetClass">' + alphabetArray[itemIndex] + '</span>').css('color', 'blue').css('font-weight', 'bold').css('background-color', '#F9F3F3');
+  //             });
+  //
+  //           } else {
+  //             console.log('Unmatching index: ' + index);
+  //           }
+  //
+  //         // $('#alphabetLabel').append(alphabetArray[index] + ' ');
+  //       });
+  // }
+
   // if doesn't match word the image rotation
   if (correct == 0 && matchingCount == 0) {
     // pic roation Hangman images
