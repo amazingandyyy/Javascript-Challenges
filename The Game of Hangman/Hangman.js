@@ -172,8 +172,8 @@ function gameStagingOne() {
               console.log('Matching index: ' + index);
 
               $('#alphabetLabel').text('');
-              // alphabetArray[index] = letter.toLowerCase();
-              alphabetArray[index] = ' ';
+              alphabetArray[index] = letter.toLowerCase();
+              // alphabetArray[index] = ' ';
               $.each(alphabetArray, function(itemIndex) {
                 $('#alphabetLabel').append(alphabetArray[itemIndex] + ' ');
                 // $('#alphabetLabel').append('<span class="alphabetClass">' + alphabetArray[itemIndex] + '</span>').css('color', 'blue').css('font-weight', 'bold').css('background-color', '#F9F3F3');
