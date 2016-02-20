@@ -165,28 +165,6 @@ function gameStagingOne() {
         // matching letter replace to Label
         wordHolder = wordHolder.substring(0, i) + letter + wordHolder.substring(i + 1, wordHolder.length + 1);
         $("#answerWord").text(wordHolder);
-
-        // // matching letter replace to lowercase Alphabet
-        // $.each(alphabetArray, function(index) {
-        //     if(alphabetArray[index].toLowerCase() == letter.toLowerCase()) {
-        //
-        //       console.log('Matching index: ' + index);
-        //
-        //       $('#alphabetLabel').text('');
-        //       alphabetArray[index] = letter.toLowerCase();
-        //       // alphabetArray[index] = ' ';
-        //       $.each(alphabetArray, function(itemIndex) {
-        //         $('#alphabetLabel').append(alphabetArray[itemIndex] + ' ');
-        //         // $('#alphabetLabel').append('<span class="alphabetClass">' + alphabetArray[itemIndex] + '</span>').css('color', 'blue').css('font-weight', 'bold').css('background-color', '#F9F3F3');
-        //       });
-        //
-        //     } else {
-        //       console.log('Unmatching index: ' + index);
-        //     }
-        //
-        //   // $('#alphabetLabel').append(alphabetArray[index] + ' ');
-        // });
-
       }
     }
   }
@@ -211,37 +189,11 @@ function gameStagingOne() {
       }
   });
 
-
-  // for (var i=0; i < hangmanName.length; i++) {
-  //       // matching letter
-  //       wordHolder = wordHolder.substring(0, i) + letter + wordHolder.substring(i + 1, wordHolder.length + 1);
-  //       $("#answerWord").text(wordHolder);
-  //
-  //       $.each(alphabetArray, function(index) {
-  //           if(alphabetArray[index].toLowerCase() == letter.toLowerCase()) {
-  //
-  //             console.log('Matching index: ' + index);
-  //
-  //             $('#alphabetLabel').text('');
-  //             // alphabetArray[index] = letter.toLowerCase();
-  //             alphabetArray[index] = ' ';
-  //             $.each(alphabetArray, function(itemIndex) {
-  //               $('#alphabetLabel').append(alphabetArray[itemIndex] + ' ');
-  //               // $('#alphabetLabel').append('<span class="alphabetClass">' + alphabetArray[itemIndex] + '</span>').css('color', 'blue').css('font-weight', 'bold').css('background-color', '#F9F3F3');
-  //             });
-  //
-  //           } else {
-  //             console.log('Unmatching index: ' + index);
-  //           }
-  //
-  //         // $('#alphabetLabel').append(alphabetArray[index] + ' ');
-  //       });
-  // }
-
   // if doesn't match word the image rotation
   if (correct == 0 && matchingCount == 0) {
     // pic roation Hangman images
-     var url = document.getElementById("hangmangImage").src = "https://raw.githubusercontent.com/march-dave/Javascript-Challenges/master/The%20Game%20of%20Hangman/Images/hang" + leftOverLife + ".gif";
+    var url = "https://raw.githubusercontent.com/march-dave/Javascript-Challenges/master/The%20Game%20of%20Hangman/Images/hang" + leftOverLife + ".gif";
+    $('#hangmangImage').attr("src", url)
 
     leftOverLife--;
     matchingCount = 0;
@@ -258,14 +210,16 @@ function gameStagingOne() {
     $("#hangmanGameDone").text("Hangman game over");
     $("#hangmanGameDone").addClass('gameOver');
 
-     var url = document.getElementById("hangmangOver").src = "https://raw.githubusercontent.com/march-dave/Javascript-Challenges/master/The%20Game%20of%20Hangman/Images/hangmanlose.png";
+     var url = "https://raw.githubusercontent.com/march-dave/Javascript-Challenges/master/The%20Game%20of%20Hangman/Images/hangmanlose.png";
+     $('#hangmangOver').attr('src', url);
   }
 
   // if word count matching count same as word count
   if (wordHolder.toLowerCase() === hangmanName.toLowerCase()) {
     $("#hangmanGameDone").text("Hangman game win");
 
-     var url = document.getElementById("hangmangOver").src = "https://raw.githubusercontent.com/march-dave/Javascript-Challenges/master/The%20Game%20of%20Hangman/Images/hangmanwin.png";
+     var url = "https://raw.githubusercontent.com/march-dave/Javascript-Challenges/master/The%20Game%20of%20Hangman/Images/hangmanwin.png";
+     $('#hangmangOver').arrt('src', url);
   }
 
   console.log("wordHolder: " + wordHolder);
