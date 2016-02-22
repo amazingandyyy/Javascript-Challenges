@@ -7,26 +7,15 @@
 The following is a mockup for a products listing widget
  -->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+  <title>Products listing</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>products listing</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-  <style type="text/css">
-  .container {
-    background-color: #5DBCD2;
-  }
-
-  img {
-    width: 20%;
-    height: 20%;
-  }
-  </style>
-
+  <link href="app.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -34,7 +23,7 @@ The following is a mockup for a products listing widget
 
     <div class=" col-sm-4 col-xs-2">
   				<div id= "panel1" class="panel panel-primary">
-  					<div class="panel-heading">Vine-picked Cucumber</div>
+  					<div class="panel-heading">Assorted Vegetables (1lb)</div>
   					<div class="panel-body">
   							<img class="img" src="Images/Assorted_Vegetables.png">
   							<div id="cucumber" class="col-sm-6 price">$2.00</div>
@@ -61,15 +50,13 @@ The following is a mockup for a products listing widget
   <div class="row">
   <div class="col-sm-2">$1.00</div>
   <div class="col-sm-2">
-    <form>
-      Qty:
+    <form>Qty:
       <input type="number" name="quantity" min="1" max="5">
     </form>
   </div>
   <div class="col-sm-2">$2.50</div>
   <div class="col-sm-2">
-    <form>
-      Qty:
+    <form>Qty:
       <input type="number" name="quantity" min="1" max="5">
     </form></div>
   <div class="col-sm-2">$0.30</div>
