@@ -219,7 +219,7 @@ function gameStagingOne() {
     $("#hangmanGameDone").text("Hangman game win");
 
      var url = "https://raw.githubusercontent.com/march-dave/Javascript-Challenges/master/The%20Game%20of%20Hangman/Images/hangmanwin.png";
-     $('#hangmangOver').arrt('src', url);
+     $('#hangmangOver').attr('src', url);
   }
 
   console.log("wordHolder: " + wordHolder);
