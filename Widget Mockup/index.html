@@ -19,58 +19,91 @@ The following is a mockup for a products listing widget
 </head>
 
 <body>
-  <div class="container-fluid">
 
-    <div class="row">
-      <div class="col-sm-4">Assorted Vegetables (1lb)</div>
-      <div class="col-sm-4">Raspberries 1lb</div>
-      <div class="col-sm-4">1 Fresh Kiwi</div>
-    </div>
+		<div class="container-fluid">
+			<div class="row">
 
-    <div class="row">
-      <div class="col-sm-4"><img src="Images/Assorted_Vegetables.png"></div>
-      <div class="col-sm-4"><img src="Images/Raspberries.png"></div>
-      <div class="col-sm-4"><img src="Images/Fresh_Kiwi.png"></div>
-    </div>
+				<form role="form">
 
-    <div class="row">
-      <div class="col-sm-2">$1.00</div>
-      <div class="col-sm-2">
-        <form>Qty:
-          <input type="number" name="quantity" min="1" max="5">
-        </form>
-      </div>
-      <div class="col-sm-2">$2.50</div>
-      <div class="col-sm-2">
-        <form>Qty:
-          <input type="number" name="quantity" min="1" max="5">
-        </form></div>
-      <div class="col-sm-2">$0.30</div>
-      <div class="col-sm-2">
-        <form>
-          Qty:
-          <input type="number" name="quantity" min="1" max="5">
-      </form>
-      </div>
-    </div>
+					<div class="col-sm-4 item">
+						<h4>Assorted Vegetables (1lb)</h4>
+						<img src="Images/Assorted_Vegetables.png" class="img-responsive">
 
-    <div class="row">
+						<div class="form-group-sm well">
+							<div class="row">
 
-      <div class="col-sm-4">
-      <button type="button" class="btn btn-default btn-lg">
-        <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>Add To Cart
-      </button>
-      </div>
-      <div class="col-sm-4"><button type="button" class="btn btn-default btn-lg">
-      <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>Add To Cart
-      </button></div>
-          <div class="col-sm-4"><button type="button" class="btn btn-default btn-lg">
-      <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>Add To Cart
-      </button></div>
+								<div class="col-lg-5 col-md-5 col-sm-4 col-sm-offset-0 col-xs-5 col-xs-offset-1">
+									<span class="item-cost">$1.00</span>
+								</div>
 
-    </div>
+								<div class="col-lg-6 col-lg-offset-1 col-md-5 col-md-offset-2 col-sm-5 col-sm-offset-1 col-xs-5 col-xs-offset-1">
+									<span class="qty">QTY:</span>
+									<input type="number" min="0" name="quantity">
+								</div>
+							</div>
 
-  </div>
+							<div class="row">
+								<button type="submit" class="btn btn-success center-block">
+									<span class="glyphicon glyphicon-shopping-cart"></span> ADD TO CART
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-4 item">
+						<h4>Raspberries (1lb)</h4>
+						<img src="Images/Raspberries.png" class="img-responsive">
+
+						<div class="form-group-sm well">
+							<div class="row">
+
+								<div class="col-lg-5 col-md-5 col-sm-4 col-sm-offset-0 col-xs-5 col-xs-offset-1">
+									<span class="item-cost-multi">$2.50</span><br>
+									<span class="item-cost-total">($5.00 TOTAL)</span>
+								</div>
+
+								<div class="col-lg-6 col-lg-offset-1 col-md-5 col-md-offset-2 col-sm-6 col-xs-5 col-xs-offset-1">
+									<span>QTY:</span>
+									<input type="number" min="0" name="quantity">
+								</div>
+							</div>
+
+							<div class="row">
+								<button type="submit" class="btn btn-success center-block">
+									<span class="glyphicon glyphicon-shopping-cart"></span> ADD TO CART
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-4 item">
+						<h4>1 Fresh Kiwi</h4>
+						<img src="Images/Fresh_Kiwi.png" class="img-responsive">
+
+						<div class="form-group-sm well">
+							<div class="row">
+
+								<div class="col-lg-5 col-md-5 col-sm-4 col-sm-offset-0 col-xs-5 col-xs-offset-1">
+									<span class="item-cost-multi">$.30</span><br>
+									<span class="item-cost-total">($2.40 TOTAL)</span>
+								</div>
+
+								<div class="col-lg-6 col-lg-offset-1 col-md-5 col-md-offset-2 col-sm-6 col-xs-5 col-xs-offset-1">
+									<span class="qty">QTY:</span>
+									<input type="number" min="0" name="quantity">
+								</div>
+							</div>
+
+							<div class="row">
+								<button type="submit" class="btn btn-success center-block">
+									<span class="glyphicon glyphicon-shopping-cart"></span> ADD TO CART
+								</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
 
 </body>
 </html>

@@ -1,11 +1,46 @@
-
-.container-fluid {
-  background-color: #5DBCD2;
+body {
+	background-color: #13A0C7;
 }
 
-img {
+input {
+	font-size: 1.9em;
+	width: 65px;
+	padding: 5px;
+	padding-left: 15px;
+	margin-left: 20px;
+}
 
-  width: 80%;
-  height: 80%;
+.btn {
+	font-weight: 200;
+	font-size: 1.3em;
+	margin-top: 15px;
+	width: 92%;
+}
 
+.item h4 {
+	font-weight: 200;
+	font-size: 1.4em;
+	color: white;
+}
+
+.item-cost {
+	color: #5a5a5a;
+	font-size: 2.8em;
+}
+
+.item-cost-multi {
+	color: #5a5a5a;
+	font-size: 2.1em;
+	line-height: 1.2em;
+}
+
+.item-cost-total {
+	color: green;
+	font-size: 1em;
+	font-style: italic;
+}
+
+.qty {
+	/*padding-left: 20px;*/
+	/*float: right;*/
 }
