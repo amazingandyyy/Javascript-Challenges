@@ -108,15 +108,8 @@ The following is a mockup for a products listing widget
     <script>
 
     $(document).ready(function() {
-      $('.qty').on('change', function(){
-
-        console.log("change: ");
-
-        var unit = $('[item-cost-multi]')
-        console.log("unit: " + unit);
-
-      
-      });
+      var unit = $('[quantity]')
+      console.log("unit: " + unit);
     });
 
 
