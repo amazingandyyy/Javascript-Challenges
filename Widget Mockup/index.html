@@ -59,13 +59,13 @@ The following is a mockup for a products listing widget
 							<div class="row">
 
 								<div class="col-lg-5 col-md-5 col-sm-4 col-sm-offset-0 col-xs-5 col-xs-offset-1">
-									<span class="item-cost-multi" data-unitPrice='2.50'>$2.50</span><br />
-									<span class="item-cost-total">($5.00 TOTAL)</span>
+									<span class="item-cost-multi" data-RaspPrice='2.50'>$2.50</span><br />
+									<span class="item-cost-total" id='rasp_cost_total'></span>
 								</div>
 
 								<div class="col-lg-6 col-lg-offset-1 col-md-5 col-md-offset-2 col-sm-6 col-xs-5 col-xs-offset-1">
 									<span>QTY:</span>
-									<input type="number" min="0" name="quantity" class="qty">
+									<input type="number" min="0" name="Raspberry_quantity" id="rasp_quantity">
 								</div>
 							</div>
 
@@ -85,13 +85,13 @@ The following is a mockup for a products listing widget
 							<div class="row">
 
 								<div class="col-lg-5 col-md-5 col-sm-4 col-sm-offset-0 col-xs-5 col-xs-offset-1">
-									<span class="item-cost-multi" data-unitPrice='.30'>$.30</span><br />
-									<span class="item-cost-total">($2.40 TOTAL)</span>
+									<span class="item-cost-multi" data-KiwiPrice='.30'>$.30</span><br />
+									<span class="item-cost-total" id='kiwi_cost_total'></span>
 								</div>
 
 								<div class="col-lg-6 col-lg-offset-1 col-md-5 col-md-offset-2 col-sm-6 col-xs-5 col-xs-offset-1">
 									<span class="qty">QTY:</span>
-									<input type="number" min="0" name="quantity" class="qty">
+									<input type="number" min="0" name="Kiwi_quantity" id="kiwi_quantity">
 								</div>
 							</div>
 
@@ -111,16 +111,30 @@ The following is a mockup for a products listing widget
     $(document).ready(function() {
 
       $('#vege_quantity').on('change', function() {
-
         var unit = $('[data-VegePrice]').text().replace(/[\$]+/g, "");
-        // unit reqular expression required
-
         var text =  unit * $('#vege_quantity').val();
-        console.log("text: " + text);
-
+        // console.log("text: " + text);
         text = text.toString();
         text = "(" + "$" + text + ".00" + " TOTAL)"
         $('#vege_cost_total').text(text);
+      });
+
+      $('#rasp_quantity').on('change', function() {
+        var unit = $('[data-RaspPrice]').text().replace(/[\$]+/g, "");
+        var text =  unit * $('#rasp_quantity').val();
+        // console.log("text: " + text);
+        text = text.toString();
+        text = "(" + "$" + text + ".00" + " TOTAL)"
+        $('#rasp_cost_total').text(text);
+      });
+
+      $('#kiwi_quantity').on('change', function() {
+        var unit = $('[data-KiwiPrice]').text().replace(/[\$]+/g, "");
+        var text =  unit * $('#kiwi_quantity').val();
+        // console.log("text: " + text);
+        text = text.toString();
+        text = "(" + "$" + text + ".00" + " TOTAL)"
+        $('#kiwi_cost_total').text(text);
       });
 
     });
