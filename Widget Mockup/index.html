@@ -124,7 +124,14 @@ The following is a mockup for a products listing widget
         var text =  unit * $('#rasp_quantity').val();
         // console.log("text: " + text);
         text = text.toString();
-        text = "(" + "$" + text + ".00" + " TOTAL)"
+        if (text.length < 3) {
+          text = "(" + "$" + text + ".00" + " TOTAL)";
+        } else if (text.length == 3) {
+          text = "(" + "$" + text + "0" + " TOTAL)";
+        } else {
+          text = "(" + "$" + text + " TOTAL)";
+        }
+        // text = "(" + "$" + text + ".00" + " TOTAL)"
         $('#rasp_cost_total').text(text);
       });
 
@@ -132,8 +139,16 @@ The following is a mockup for a products listing widget
         var unit = $('[data-KiwiPrice]').text().replace(/[\$]+/g, "");
         var text =  unit * $('#kiwi_quantity').val();
         // console.log("text: " + text);
+
+        text = Math.round(text * 100) / 100;
         text = text.toString();
-        text = "(" + "$" + text + ".00" + " TOTAL)"
+        if (text.length < 3) {
+          text = "(" + "$" + text + ".00" + " TOTAL)";
+        } else if (text.length == 3) {
+          text = "(" + "$" + text + "0" + " TOTAL)";
+        } else {
+          text = "(" + "$" + text + " TOTAL)";
+        }
         $('#kiwi_cost_total').text(text);
       });
 
