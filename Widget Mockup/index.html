@@ -114,7 +114,10 @@ The following is a mockup for a products listing widget
       $('.quantity').on('change', function() {
 
         // var unit = $('[item-cost]');
-        var unit = $('[data-unitPrice]').text();
+        // var unit = $('[data-unitPrice]').text().replace(/[\d\.]+/g, "");
+        var unit = $('[data-unitPrice]').text().replace(/[\$\.]+/g, "");
+        // unit reqular expression required
+
         var text =  unit * $('.quantity').val();
         console.log("text: " + text);
 
