@@ -33,12 +33,13 @@ The following is a mockup for a products listing widget
 							<div class="row">
 
 								<div class="col-lg-5 col-md-5 col-sm-4 col-sm-offset-0 col-xs-5 col-xs-offset-1">
-									<span class="item-cost" data-unitPrice='1'>$1.00</span>
+									<span class="item-cost-multi" data-VegePrice='1'>$1.00</span><br />
+                  <span class="item-cost-total" id='vege_cost_total'></span>
 								</div>
 
 								<div class="col-lg-6 col-lg-offset-1 col-md-5 col-md-offset-2 col-sm-5 col-sm-offset-1 col-xs-5 col-xs-offset-1">
 									<span class="qty">QTY:</span>
-									<input type="number" min="0" name="vegetable_quantity" class="quantity">
+									<input type="number" min="0" name="vegetable_quantity" id="vege_quantity">
 								</div>
 							</div>
 
@@ -58,7 +59,7 @@ The following is a mockup for a products listing widget
 							<div class="row">
 
 								<div class="col-lg-5 col-md-5 col-sm-4 col-sm-offset-0 col-xs-5 col-xs-offset-1">
-									<span class="item-cost-multi">$2.50</span><br>
+									<span class="item-cost-multi" data-unitPrice='2.50'>$2.50</span><br />
 									<span class="item-cost-total">($5.00 TOTAL)</span>
 								</div>
 
@@ -84,7 +85,7 @@ The following is a mockup for a products listing widget
 							<div class="row">
 
 								<div class="col-lg-5 col-md-5 col-sm-4 col-sm-offset-0 col-xs-5 col-xs-offset-1">
-									<span class="item-cost-multi">$.30</span><br>
+									<span class="item-cost-multi" data-unitPrice='.30'>$.30</span><br />
 									<span class="item-cost-total">($2.40 TOTAL)</span>
 								</div>
 
@@ -108,23 +109,18 @@ The following is a mockup for a products listing widget
     <script>
 
     $(document).ready(function() {
-      // var unit = $('[quantity]')
-      // console.log("unit: " + unit);
 
-      $('.quantity').on('change', function() {
+      $('#vege_quantity').on('change', function() {
 
-        // var unit = $('[item-cost]');
-        // var unit = $('[data-unitPrice]').text().replace(/[\d\.]+/g, "");
-        var unit = $('[data-unitPrice]').text().replace(/[\$]+/g, "");
+        var unit = $('[data-VegePrice]').text().replace(/[\$]+/g, "");
         // unit reqular expression required
 
-        var text =  unit * $('.quantity').val();
+        var text =  unit * $('#vege_quantity').val();
         console.log("text: " + text);
 
-        // var text =  unit * $('#orangeVal').val()
-        // text = text.toString()
-        // text = "$" + text + ".00"
-        // $('#orange').text(text);
+        text = text.toString();
+        text = "(" + "$" + text + ".00" + " TOTAL)"
+        $('#vege_cost_total').text(text);
       });
 
     });
