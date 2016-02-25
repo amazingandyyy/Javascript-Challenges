@@ -1,5 +1,5 @@
 body {
-	background-color: #13A0C7;
+	background-color: #0B7B9A;
 }
 
 input {
@@ -38,9 +38,4 @@ input {
 	color: green;
 	font-size: 1em;
 	font-style: italic;
-}
-
-.qty {
-	/*padding-left: 20px;*/
-	/*float: right;*/
 }
