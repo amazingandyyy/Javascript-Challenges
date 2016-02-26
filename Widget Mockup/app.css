@@ -39,3 +39,9 @@ input {
 	font-size: 1em;
 	font-style: italic;
 }
+
+.qty {
+	display: inline-block;
+	float: right;
+	padding-right: 10%;
+}
