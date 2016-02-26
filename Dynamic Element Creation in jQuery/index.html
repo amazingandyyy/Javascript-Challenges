@@ -1,4 +1,7 @@
-<!-- You should keep your DOM manipulations to a minimum. Don't append your elements to the DOM in a loop, as this will results in many DOM manipulations. Instead, add your elements to an array and then append that array all at once.
+<!--
+Write an app with jQuery to dynamically create a checker board. Using the provided HTML, print a checker board to the DOM (without the game pieces). Then use jQuery to loop through the dynamic table elements to color the squares like shown below.
+
+You should keep your DOM manipulations to a minimum. Don't append your elements to the DOM in a loop, as this will results in many DOM manipulations. Instead, add your elements to an array and then append that array all at once.
 
 For an extra challenge, create an input box for the user to select the size of the board. Then print game pieces into their starting location. -->
 
@@ -10,12 +13,25 @@ For an extra challenge, create an input box for the user to select the size of t
 <body>
 
 <h1> Game Board </h1>
-<table id="gameBoard">
-<tbody> Init  </tbody>
-</table>
+<!-- <table id="gameBoard">
+<tbody></tbody>
+</table> -->
+
+<div id="gameBoard">
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+</div>
+
 
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="main.js"></script>
+
 
 </body>
 </html>

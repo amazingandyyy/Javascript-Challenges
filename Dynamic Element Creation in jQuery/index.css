@@ -1,3 +1,28 @@
 body {
-  background-color: #fff;
+  background-color: #424242;
+}
+
+#gameBoard {
+    width: 320px;
+    height: 320px;
+    margin: 0.5em;
+    border: 2px solid #808080;
+}
+
+#gameBoard div {
+    float: left;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+}
+
+#gameBoard div:nth-child(-2n+8),
+#gameBoard div:nth-child(8) ~ div:nth-child(-2n+15),
+#gameBoard div:nth-child(16) ~ div:nth-child(-2n+24),
+#gameBoard div:nth-child(24) ~ div:nth-child(-2n+31),
+#gameBoard div:nth-child(32) ~ div:nth-child(-2n+40),
+#gameBoard div:nth-child(40) ~ div:nth-child(-2n+47),
+#gameBoard div:nth-child(48) ~ div:nth-child(-2n+56),
+#gameBoard div:nth-child(56) ~ div:nth-child(-2n+63) {
+    background-color: #000;
 }
