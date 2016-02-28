@@ -21,13 +21,13 @@ $(document).ready(function() {
 
 
 	var elements = $();
-	for(x = 0; x < 5; x++) {
+	for(x = 0; x < 64; x++) {
 	    elements = elements.add('<div>'+x+'</div>');
 	    // or 
 	    // var element = $('<div>'+x+'</div>');
 	    // elements = elements.add(element);
 	}
-	$('body').append(elements);
+	$('#gameBoard').append(elements);
 
 
 
