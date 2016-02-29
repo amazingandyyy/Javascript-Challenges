@@ -2,7 +2,7 @@
 Write an app with jQuery to dynamically create a checker board. Using the provided HTML, print a checker board to the DOM (without the game pieces). Then use jQuery to loop through the dynamic table elements to color the squares like shown below.
 
 You should keep your DOM manipulations to a minimum. Don't append your elements to the DOM in a loop, as this will results in many DOM manipulations. Instead, add your elements to an array and then append that array all at once.
-
+4
 For an extra challenge, create an input box for the user to select the size of the board. Then print game pieces into their starting location. -->
 
 <!DOCTYPE html>
@@ -18,19 +18,16 @@ For an extra challenge, create an input box for the user to select the size of t
 </table> -->
 
 <div class="container">
+
+  <input type="text" >
+
   <div id="gameBoard">
-      <!-- <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div> -->
   </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="jquery-2.2.1.min.js"></script>
+
 <script src="main.js"></script>
 
 </body>
