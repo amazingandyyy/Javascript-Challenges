@@ -6,7 +6,7 @@ $(document).ready(function() {
 
 		var elements = $();
 		for(x = 0; x < 64; x++) {
-			elements = elements.add('<div style=width:' + size + 'px;>');
+			elements = elements.add('<div style=width:' + size + 'px;' +  ' ' + '>');
 			elements = elements.add('</div>');
 			// elements = elements.add('<div style=width:' + size + 'px' + ';height:' + size + 'px;background-color:#000;></div>');
 		
