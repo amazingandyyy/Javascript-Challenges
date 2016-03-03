@@ -3,13 +3,12 @@ body {
 }
 
 .container {
-    /*margin: 1em;*/
+    margin: 1em;
 }
 
 input {
     margin: 1em;
 }
-
 
 #gameBoard {
     width: 320px;
