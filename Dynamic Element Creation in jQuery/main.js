@@ -7,14 +7,12 @@ $(document).ready(function() {
 
 			// resize css
 
-
 			for(x = 0; x < 64; x++) {
 				elements = elements.add('<div style=width:' + size + 'px;' +  'height:' + size + 'px;' +'>');
 				elements = elements.add('</div>');
 			}
-			$('#gameBoard').append(elements);
-
-		
+			// $('#gameBoard').append(elements);
+			$('#gameBoard').html(elements);
 		
 	});
 });
