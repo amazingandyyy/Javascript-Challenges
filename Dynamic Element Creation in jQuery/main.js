@@ -11,7 +11,6 @@ $(document).ready(function() {
 				elements = elements.add('<div style=width:' + size + 'px;' +  'height:' + size + 'px;' +'>');
 				elements = elements.add('</div>');
 			}
-			// $('#gameBoard').append(elements);
 			$('#gameBoard').html(elements);
 		
 	});
