@@ -12,6 +12,24 @@ $(document).ready(function() {
 				elements = elements.add('</div>');
 			}
 			$('#gameBoard').html(elements);
-		
+
 	});
 });
+
+
+
+//  var size = 8;
+//     var board = "";
+//     for (var y = 0; y < size; y++) {
+//       for (var x = 0; x < size; x++) {
+//         if ((x + y) % 2 == 0)
+//           {
+//         $(".tile").eq(count).addClass("black");
+//       } 
+          
+//           else {
+//         $(".tile").eq(count).addClass("white");
+//       }
+//     }
+//   board += "\n";
+// }
