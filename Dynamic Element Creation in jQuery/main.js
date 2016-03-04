@@ -1,4 +1,9 @@
-$(document).ready(function() {
+'use strict';
+
+
+$(document).ready(init);
+
+function init() {
 
 	$('#boardSize').keyup(function() { 
 
@@ -7,16 +12,15 @@ $(document).ready(function() {
 
 			// resize css
 
-			for(x = 0; x < 64; x++) {
+			for(var x = 0; x < 64; x++) {
 				elements = elements.add('<div style=width:' + size + 'px;' +  'height:' + size + 'px;' +'>');
 				elements = elements.add('</div>');
 			}
 			$('#gameBoard').html(elements);
 
 	});
-});
 
-
+}
 
 //  var size = 8;
 //     var board = "";
