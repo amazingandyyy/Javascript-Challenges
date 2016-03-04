@@ -5,6 +5,12 @@ $(document).ready(init);
 
 function init() {
 
+	gameBoardDraw()	
+
+}
+
+function gameBoardDraw() {
+
 	$('#boardSize').keyup(function() { 
 
 			var size = $('#boardSize').val();
