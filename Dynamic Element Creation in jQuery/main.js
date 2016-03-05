@@ -5,7 +5,7 @@ $(document).ready(init);
 
 function init() {
 
-	gameBoardDraw()	
+	gameBoardDraw();	
 
 }
 
@@ -34,11 +34,11 @@ function gameBoardDraw() {
 //       for (var x = 0; x < size; x++) {
 //         if ((x + y) % 2 == 0)
 //           {
-//         $(".tile").eq(count).addClass("black");
+//         $(".gameBoard").eq(count).addClass("black");
 //       } 
           
 //           else {
-//         $(".tile").eq(count).addClass("white");
+//         $(".gameBoard").eq(count).addClass("white");
 //       }
 //     }
 //   board += "\n";
