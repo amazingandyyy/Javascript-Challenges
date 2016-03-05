@@ -21,11 +21,25 @@ function age(year, month, day) {
   var today = new Date();
   var targetDate = new Date(year, month, day);
 
-  var yearDifference = Math.abs(today.getFullYear() - targetDate.getFullYear());
-  var monthDifference = Math.abs(today.getMonth() - targetDate.getMonth());
-  var dayDifference = Math.abs(today.getDate() - targetDate.getDate());
+  var yearDifference = today.getFullYear() - targetDate.getFullYear();
+  var monthDifference = today.getMonth() - targetDate.getMonth();
+  var dayDifference = today.getDate() - targetDate.getDate();
+
+
+  if(yearDifference < 0) {
+    yearDifference = yearDifference * -1;
+  }
+
+  if(monthDifference < 0){
+    monthDifference = monthDifference * -1;
+  }
+
+  if(dayDifference < 0){
+    dayDifference = dayDifference * -1;
+  }
 
   return yearDifference + " years" + " " + monthDifference + " months" + " " + dayDifference + " days";
 
-
 }
+
+console.log(age(2016, 1, 2));
