@@ -11,34 +11,23 @@
 // median -5, -3, 0, 3, 7, 12, 44
 // would return: { "odds": 4, "negatives": 2, "avg": 8.29, "median": 3 }
 
-// Array Analyzer
 function arrayAnalyzer(args) {
 
   // console.log("args:" + args);
 
-  // return error if function has no arguments
-  if (arguments.length < 1) { return "arrayAnalyzer(args) requires at least one number argument"; }
-
   // console.log("arguments length:" + arguments.length);
-
 
   // ref url: http://bonsaiden.github.io/JavaScript-Garden/ko/#core.eval
   // arguments is special varliable which is also have length but not "array"
   // There are no standard push, pop, slice method
   // arguments convert to array prototype -> slice -> call
   // but it might have have performance issue
-  var argsArray = Array.prototype.slice.call(arguments);
+  var argumentArray = Array.prototype.slice.call(arguments);
 
   // filter out non-numbers
-  var filteredArray = argsArray.filter(function(n) {
+  var filteredArray = argumentArray.filter(function(n) {
     return !isNaN(parseFloat(n)) && isFinite(n);
   });
-
-  // return error if filtered array is empty because there were no number arguments
-  if (filteredArray.length < 1) return "arrayAnalyzer(args) reguires at least one number argument";
-
-
-  // Helper Functions ////////////////////////////////////
 
   // odd number counter helper function
   function oddCounter() {
