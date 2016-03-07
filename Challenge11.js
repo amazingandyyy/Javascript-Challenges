@@ -28,7 +28,7 @@ function age(year, month, day) {
   var targetDate = new Date(year, month, day);
 
   // var dayDifference =  targetDate.getDate() - currentDate.getDate();
-  var dayDifference =  Math.abs(targetDate.getDate() - currentDate)/86400000;
+  var dayDifference =  Math.abs(targetDate.getDate() - currentDate)/86400000; //1000*60*60*24
   var monthDifference = targetDate.getMonth() - currentDate.getMonth();
   var yearDifference =  targetDate.getFullYear() - currentDate.getFullYear();
 
