@@ -24,12 +24,13 @@
 
 function age(year, month, day) {
 
-  var today = new Date();
+  var currentDate = new Date();
   var targetDate = new Date(year, month, day);
 
-  var yearDifference =  targetDate.getFullYear() - today.getFullYear();
-  var monthDifference = targetDate.getMonth() - today.getMonth();
-  var dayDifference =  targetDate.getDate() - today.getDate();
+  // var dayDifference =  targetDate.getDate() - currentDate.getDate();
+  var dayDifference =  Math.abs(targetDate.getDate() - currentDate)/86400000;
+  var monthDifference = targetDate.getMonth() - currentDate.getMonth();
+  var yearDifference =  targetDate.getFullYear() - currentDate.getFullYear();
 
   if(dayDifference < 0){
     dayDifference = dayDifference * -1;
@@ -48,8 +49,5 @@ function age(year, month, day) {
 }
 
 console.log(age(2016, 1, 2));
-
-
-
 
 
