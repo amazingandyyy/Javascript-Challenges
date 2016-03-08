@@ -24,30 +24,35 @@
 
 function age(year, month, day) {
 
-  var currentDate = new Date();
+  var currentDate = new Date().getTime();
   var targetDate = new Date(year, month, day);
 
   // var dayDifference =  targetDate.getDate() - currentDate.getDate();
-  var dayDifference =  Math.abs(targetDate.getDate() - currentDate)/86400000; //1000*60*60*24
-  var monthDifference = targetDate.getMonth() - currentDate.getMonth();
-  var yearDifference =  targetDate.getFullYear() - currentDate.getFullYear();
+  var dayDifference =  Math.abs(targetDate.getDate() - currentDate)/86400000; // 1000*60*60*24
+  // var monthDifference = targetDate.getMonth() - currentDate.getMonth();
+  // var yearDifference =  targetDate.getFullYear() - currentDate.getFullYear();
+  var monthDifference = 0;
+  var yearDifference =  0;
 
-  if(dayDifference < 0){
-    dayDifference = dayDifference * -1;
-  }
+  if (dayDifference > 30) {
+    monthDifference = parseInt(dayDifference / 30);
 
-  if(monthDifference < 0){
-    monthDifference = monthDifference * -1;
-  }
+    if (monthDifference >= 12) {
+      yearDifference = parseInt(monthDifference / 12);
+      monthDifference = parseInt(monthDifference % 12);
+    }
 
-  if(yearDifference < 0) {
-    yearDifference = yearDifference * -1;
+    dayDifference = parseInt(dayDifference % 30);
   }
 
   return yearDifference + " years" + " " + monthDifference + " months" + " " + dayDifference + " days";
 
 }
 
-console.log(age(2016, 1, 2));
+// console.log(age(2015, 3, 2));
+console.log(age(2017, 11, 17));
+
+// age(2017, 11, 17)
+// age(2015, 3, 6)
 
 
