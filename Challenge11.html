@@ -12,17 +12,33 @@
 <script>
 function age(year, month, day) {
 
-  var today = new Date();
-  var targetDate = new Date(year, month, day);
+  var currentDate = new Date().getTime();
+  var targetDate = new Date(year, month, day).getTime();
 
-  var days = Math.abs(today.getDate() - targetDate.getDate());
-  var months = Math.abs(today.getMonth() - targetDate.getMonth());
-  var years = Math.abs(today.getFullYear() - targetDate.getFullYear());
+  // var dayDifference =  targetDate.getDate() - currentDate.getDate();
+  var dayDifference =  Math.floor((targetDate - currentDate)/86400000); // 1000*60*60*24
+  // var monthDifference = targetDate.getMonth() - currentDate.getMonth();
+  // var yearDifference =  targetDate.getFullYear() - currentDate.getFullYear();
+  var monthDifference = 0;
+  var yearDifference =  0;
 
-  return years + " years" + " " + months + " months" + " " + days + " days";
+  if (dayDifference > 30) {
+    monthDifference = parseInt(dayDifference / 30);
+
+    if (monthDifference >= 12) {
+      yearDifference = parseInt(monthDifference / 12);
+      monthDifference = parseInt(monthDifference % 12);
+    }
+
+    dayDifference = parseInt(dayDifference % 30);
+  }
+
+  return yearDifference + " years" + " " + monthDifference + " months" + " " + dayDifference + " days";
+
 }
 
-console.log(age(2017, 1, 2));
+// console.log(age(2016, 2, 10));
+ console.log(age(2017, 1, 3));
 // function age(year,month,day) {
 //
 // 	var today = new Date().getTime();
