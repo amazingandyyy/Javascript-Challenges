@@ -1,8 +1,24 @@
-// In this first challenge, you will be following along with this tutorial. You may not understand a lot of these concepts - that's ok! This is meant to introduce you to the process of building a mini application, as well as familiarizing yourself with JSFiddle and how to submit your solutions.
 
-// The code will be provided for you, but don't copy and paste! Follow the steps, write the code, and get excited about making your first app!
+var isOperating = false;
+var isFloating = false;
+var toBeCleared = false;
+var operator;
+var operand;
+var display;
 
-// Once you have finished, you will dive into the concepts and really understand what is going on so you can do these things on your own.
+$(document).ready(init);
 
-// If you get stuck, reach out to us - we are here to help!
+function init() {
+	display = $('#display');
+	$('.num').on('click', numClicked);
+	// $('.operator').on('click', operatorClicked);
+	// $('#invert').on('click', invertClicked);
+	// $('#root').on('click', rootClicked);
+	// $('#decimal').on('click', decimalClicked);
+	// $('#equals').on('click', equalsClicked);
+	// $('#clear').on('click', clearClicked);
+}
 
+function numClicked () {
+	alert('Number button clicked!');
+}
