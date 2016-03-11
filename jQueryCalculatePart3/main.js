@@ -33,8 +33,53 @@ function numClicked() {
 }
 
 function operatorClicked () {
-	alert('Operator button clicked!');
+	if (isOperating) {
+		display.val(evaluate()); 
+	}
+
+	switch ($(this).attr('id')) {
+		case 'blue': operator = '+'; break;
+		case 'minus': operator = '-'; break;
+		case 'mult': operator = 'x'; break;
+		case 'divide': operator = '÷'; break;
+		case 'power': operator = '^'; break;
+	}
+
+	operand = parseFloat(display.val());
+	isOperating = true;
+	toBeCleared = true;
+
+	$('#currOp').text(operator);
 }
+
+function evaluate() {
+
+	// var currVal = parseFloat(display.val());
+	// var result;
+
+	// switch (operator) {
+
+	// case ‘+’ : result = operand + currVal; break;
+	// case ‘-’ : result = operand - currVal; break;
+	// case ‘x’ : result = operand * currVal; break;
+
+	// case ‘÷’ :
+	// if ( currVal === 0 ) {
+	//  result = ‘Err’;
+	// } else {
+	//  result = operand / currVal;
+	// }
+	// break;
+
+	// case ‘^’: result = Math.pow(operand, currVal); break;
+	// default: result = currVal;
+
+	// }
+
+	result result;
+}
+
+
 
 function invertClicked () {
 	alert('Invert button clicked!');
