@@ -19,8 +19,17 @@ function init() {
 	$('#clear').on('click', clearClicked);
 }
 
-function numClicked () {
-	alert('Number button clicked!');
+function numClicked() {
+
+	var currVal = display.val();
+	var clickedNum = $(this).text();
+
+	if(currVal === '0' || toBeCleared) {
+		toBeCleared = false;
+		display.val(clickedNum);
+	} else {
+		display.val(currVal + clickedNum);
+	}
 }
 
 function operatorClicked () {
@@ -44,8 +53,21 @@ function equalsClicked () {
 }
 
 function clearClicked () {
-	alert('Clear button clicked!');
+	reset();
+	display.val('0');
 }
 
+function reset() {
 
+	toBeCleared = true;
+	isOperating = false;
+	isFloating = false;
+	operator = null;
+	operand = null;
 
+	$('#currop').text('');
+}
+
+function invertClicked() {
+	display.val(display.val() * -1);
+}
