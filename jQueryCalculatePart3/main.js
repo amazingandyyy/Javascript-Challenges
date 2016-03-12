@@ -20,7 +20,6 @@ function init() {
 }
 
 function numClicked() {
-
 	var currVal = display.val();
 	var clickedNum = $(this).text();
 
@@ -53,7 +52,6 @@ function operatorClicked () {
 }
 
 function evaluate() {
-
 	var currVal = parseFloat(display.val());
 	var result;
 
@@ -110,7 +108,6 @@ function clearClicked () {
 }
 
 function reset() {
-
 	toBeCleared = true;
 	isOperating = false;
 	isFloating = false;
