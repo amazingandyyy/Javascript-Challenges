@@ -38,7 +38,7 @@ function operatorClicked () {
 	}
 
 	switch ($(this).attr('id')) {
-		case 'blue': operator = '+'; break;
+		case 'plus': operator = '+'; break;
 		case 'minus': operator = '-'; break;
 		case 'mult': operator = 'x'; break;
 		case 'divide': operator = '÷'; break;
@@ -54,47 +54,54 @@ function operatorClicked () {
 
 function evaluate() {
 
-	// var currVal = parseFloat(display.val());
-	// var result;
+	var currVal = parseFloat(display.val());
+	var result;
 
-	// switch (operator) {
+	switch (operator) {
 
-	// case ‘+’ : result = operand + currVal; break;
-	// case ‘-’ : result = operand - currVal; break;
-	// case ‘x’ : result = operand * currVal; break;
+		case '+' : result = operand + currVal; break;
+		case '-' : result = operand - currVal; break;
+		case 'x' : result = operand * currVal; break;
 
-	// case ‘÷’ :
-	// if ( currVal === 0 ) {
-	//  result = ‘Err’;
-	// } else {
-	//  result = operand / currVal;
-	// }
-	// break;
+		case '÷' :
+			if ( currVal === 0 ) {
+			 result = 'Err';
+			} else {
+			 result = operand / currVal;
+			}
+		break;
 
-	// case ‘^’: result = Math.pow(operand, currVal); break;
-	// default: result = currVal;
+	case '^': result = Math.pow(operand, currVal); break;
+	default: result = currVal; break;
 
-	// }
+	}
 
-	result result;
+	return result;
 }
-
-
 
 function invertClicked () {
 	alert('Invert button clicked!');
 }
 
 function rootClicked () {
-	alert('Root button clicked!');
+	display.val(Math.sqrt(evaluate()));
 }
 
 function decimalClicked () {
-	alert('Decimal button clicked!');
+	if (toBeCleared) {
+		display.val('0.');
+		toBeCleared = false;
+	} else {
+		if(!isFloating) { 
+			display.val(display.val().concat('.'));
+		}
+	}
+	isFloating = true;
 }
 
 function equalsClicked () {
-	alert('Equals button clicked!');
+	display.val(evaluate());
+	reset();
 }
 
 function clearClicked () {
