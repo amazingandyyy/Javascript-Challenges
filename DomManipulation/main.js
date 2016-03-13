@@ -8,3 +8,13 @@
 // After the JavaScript executes, the page should look identical to the provided sample HTML
 // On you have created all of the buttons, add click handlers to them. Whenever a button is clicked, replace the text in the <h3> with the contents of the button
 // For example, if the user clicks the "Left" button, the <h3> should then say "Left"
+
+
+
+addEventListener('load', myFunction);
+
+function myFunction() {
+	var element = document.createElement('div');
+	document.body.appendChild(element);	
+} 
+
