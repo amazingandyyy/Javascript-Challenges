@@ -30,6 +30,15 @@ function myFunction() {
 		// document.body.appendChild(element);
 		elementDiv.appendChild(element);
 
+			var element2 = document.createElement('h3');
+			element2.innerText = 'Nothing clicked yet!';
+			elementDiv.appendChild(element2);
+
+
+				var element3 = document.createElement('button');
+				element3.innerText = 'Star';
+				element3.className = 'btn btn-default btn-lg';
+				elementDiv.appendChild(element3);
 
 }
 
