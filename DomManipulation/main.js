@@ -19,15 +19,18 @@ document.addEventListener('DOMContentLoaded', myFunction);
 function myFunction() {
 	var elementDiv = document.createElement('div');
 	elementDiv.className = 'row';
-	document.body.appendChild(elementDiv);	
+	document.body.appendChild(elementDiv);
 
-	// document.body.appendChild(element);	
-	var element = document.createElement('button');
-	element.innerText = 'my Button';
-	element.addEventListener('click',  replaceText);
+		// document.body.appendChild(element);	
+		var element = document.createElement('div');
+		element.className = 'col-md-12';
+		// element.innerText = 'my Button';
+		// element.addEventListener('click',  replaceText);
 
-	// document.body.appendChild(element);
-	elementDiv.appendChild(element);
+		// document.body.appendChild(element);
+		elementDiv.appendChild(element);
+
+
 }
 
 function replaceText() {
