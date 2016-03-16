@@ -109,23 +109,21 @@ function setUpBtnGroupThreeOption() {
 		element.className = 'btn btn-default';
 		elementDivBtnGroup.appendChild(element);
 
-		element.addEventListener('click' , replaceText);
+		// element.addEventListener('click' , replaceText(threeOption[i]));
+		element.addEventListener('click', function(element) { document.getElementsByTagName('H3')[0].innerHTML = "Hello World" } );
 	}
 }
 
-function replaceText() {
+function replaceText(buttonLabel) {
+	var elementH3 = document.getElementsByTagName('H3');
+	elementH3[0].innerText = buttonLabel;
 
-	
+
+	// document.getElementById("myBtn").addEventListener("click", function(){
+ //    document.getElementById("demo").innerHTML = "Hello World";
+	// });
+
 }
-
-
-	// var element = document.createElement('button');
- //  	element.innerText = 'my Button';
- //  	element.addEventListener('click',  replaceText);
-
-
-
-
 
 // function sayHello2(name) {
 //     var text = 'Hello ' + name; // Local variable
