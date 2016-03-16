@@ -26,10 +26,19 @@ function init() {
 
 	setUpDivEmpty();
 	setUpDivBtnGroup('btn-group');
-	setUpBtnGroup(4);
+	setUpBtnGroup(0, 4);
 
 	setUpDivBtnGroup('btn-group');
-	setUpBtnGroup(3);
+	setUpBtnGroup(4, 7);
+
+	setUpDivBtnGroup('btn-group');
+	setUpBtnGroup(7, 8);
+
+	setUpHr();
+
+	setUpDivEmpty();
+	setUpDivBtnGroup('btn-group btn-group-lg');
+	setUpBtnGroupThreeOption();
 }
 
 function setUpDivRow() {
@@ -50,13 +59,6 @@ function setUpH3() {
 	elementH3.innerText = 'Nothing clicked yet!';
 	elementColMD.appendChild(elementH3);
 }
-
-// function replaceText() {
-// 	var elementH3 = document.createElement('h3');
-// 	elementH3.innerText = "Left"	
-
-// 	document.body.appendChild(elementH3);	
-// }
 
 function setUpStarButton() {
 	var elementStarButton = document.createElement('button');
@@ -83,22 +85,47 @@ function setUpDivBtnGroup(divName) {
 	elementDivEmpty.appendChild(elementDivBtnGroup);
 }
 
+function setUpBtnGroup(buttonCountStart, buttonCountEnd) {
 
+	var i = buttonCountStart;
 
-function setUpBtnGroup(buttonCount) {
-
-
-
-	for (var i=0; i < buttonCount; i++) {
+	for (i ; i < buttonCountEnd; i++) {
 		var element = document.createElement('button');
 		element.innerText = i + 1;
+		element.type = 'button';
 		element.className = 'btn btn-default';
 		elementDivBtnGroup.appendChild(element);
 	}
-
-
-
 }
+
+function setUpBtnGroupThreeOption() {
+
+	var threeOption = ['Left', 'Middle', 'Right'];
+
+	for (var i = 0 ; i < threeOption.length; i++) {
+		var element = document.createElement('button');
+		element.innerText = threeOption[i];
+		element.type = 'button';
+		element.className = 'btn btn-default';
+		elementDivBtnGroup.appendChild(element);
+
+		element.addEventListener('click' , replaceText);
+	}
+}
+
+function replaceText() {
+
+	
+}
+
+
+	// var element = document.createElement('button');
+ //  	element.innerText = 'my Button';
+ //  	element.addEventListener('click',  replaceText);
+
+
+
+
 
 // function sayHello2(name) {
 //     var text = 'Hello ' + name; // Local variable
