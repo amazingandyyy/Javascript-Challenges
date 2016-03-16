@@ -95,6 +95,8 @@ function setUpBtnGroup(buttonCountStart, buttonCountEnd) {
 		element.type = 'button';
 		element.className = 'btn btn-default';
 		elementDivBtnGroup.appendChild(element);
+
+		element.addEventListener('click', applyHeader);
 	}
 }
 
@@ -104,20 +106,38 @@ function setUpBtnGroupThreeOption() {
 
 	for (var i = 0 ; i < threeOption.length; i++) {
 		var element = document.createElement('button');
-		element.innerText = threeOption[i];
+		element.innerHTML = threeOption[i];
 		element.type = 'button';
 		element.className = 'btn btn-default';
 		elementDivBtnGroup.appendChild(element);
 
-		// element.addEventListener('click' , replaceText(threeOption[i]));
-		element.addEventListener('click', function(element) { document.getElementsByTagName('H3')[0].innerHTML = 'Hi' } );
+		element.addEventListener('click', applyHeader);
 	}
 }
 
+function applyHeader(e) {
+
+	var pass = e.target || e.srcElement;
+	var header = pass.innerHTML;
+
+	var elementH3 = document.getElementsByTagName('H3');
+	elementH3[0].innerHTML = header;
+}
+
+
 function replaceText(buttonLabel) {
 	var elementH3 = document.getElementsByTagName('H3');
-	elementH3[0].innerText = buttonLabel;
+	elementH3[0].innerHTML = buttonLabel;
 }
+
+// document.getElementById("myBtn").addEventListener("click", function() {
+//     myFunction(p1, p2);
+// });
+
+// function myFunction(a, b) {
+//     var result = a * b;
+//     document.getElementById("demo").innerHTML = result;
+// }
 
 // function sayHello2(name) {
 //     var text = 'Hello ' + name; // Local variable
