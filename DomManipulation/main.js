@@ -22,6 +22,9 @@ function init() {
 	setUpDivcolmd12();
 	setUpH3();
 	setUpStarButton();
+	setUpHr();
+
+	setUpDivBtnGroup();
 }
 
 function setUpDivRow() {
@@ -55,6 +58,21 @@ function setUpStarButton() {
 	elementStarButton.className = 'btn btn-default btn-lg';
 	elementDivRow.appendChild(elementStarButton);
 }
+
+function setUpHr() {
+	var element = document.createElement('hr');
+	elementDivRow.appendChild(element);
+}
+
+function setUpDivBtnGroup() {
+	for (var i=0; i < 4; i ++) {
+		var element = document.createElement('button');
+		element.innerText = i + 1;
+		element.className = 'btn btn-default';
+		elementDivRow.appendChild(element);
+	}
+}
+
 
 // <div class="container">
 //   <div class="row">
