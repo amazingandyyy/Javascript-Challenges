@@ -19,14 +19,17 @@ document.addEventListener('DOMContentLoaded', init);
 
 function init() {
 	setUpDivRow();
-	setUpDiv('col-md-12', );
+	setUpDiv('col-md-12');
 	setUpH3();
 	setUpStarButton();
 	setUpHr();
 
-	setUpDiv('btn-group');
-	setUpDivBtnGroup(4);
-	setUpDivBtnGroup(3);
+	setUpDivEmpty();
+	setUpDivBtnGroup('btn-group');
+	setUpBtnGroup(4);
+
+	setUpDivBtnGroup('btn-group');
+	setUpBtnGroup(3);
 }
 
 function setUpDivRow() {
@@ -36,7 +39,7 @@ function setUpDivRow() {
 }
 
 var elementColMD;
-function setUpDiv(divName, appendName) {
+function setUpDiv(divName) {
 	elementColMD = document.createElement('div');
 	elementColMD.className = divName;
 	elementDivRow.appendChild(elementColMD);
@@ -67,16 +70,43 @@ function setUpHr() {
 	elementColMD.appendChild(element);
 }
 
-function setUpDivBtnGroup(buttonCount) {
-	for (var i=0; i < buttonCount; i ++) {
-		var element = document.createElement('button');
-		element.innerText = i + 1;
-		element.className = 'btn btn-default';
-		elementColMD.appendChild(element);
-	}
+var elementDivEmpty = '';
+function setUpDivEmpty() {
+	elementDivEmpty = document.createElement('div');
+	elementColMD.appendChild(elementDivEmpty);
+}
+
+var elementDivBtnGroup = '';
+function setUpDivBtnGroup(divName) {
+	elementDivBtnGroup = document.createElement('div');
+	elementDivBtnGroup.className = divName;
+	elementDivEmpty.appendChild(elementDivBtnGroup);
 }
 
 
+
+function setUpBtnGroup(buttonCount) {
+
+
+
+	for (var i=0; i < buttonCount; i++) {
+		var element = document.createElement('button');
+		element.innerText = i + 1;
+		element.className = 'btn btn-default';
+		elementDivBtnGroup.appendChild(element);
+	}
+
+
+
+}
+
+// function sayHello2(name) {
+//     var text = 'Hello ' + name; // Local variable
+//     var say = function() { console.log(text); }
+//     return say;
+// }
+// var say2 = sayHello2('Bob');
+// say2(); // logs "Hello Bob"
 
 
 // <div class="container">
