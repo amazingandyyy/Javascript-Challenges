@@ -110,19 +110,13 @@ function setUpBtnGroupThreeOption() {
 		elementDivBtnGroup.appendChild(element);
 
 		// element.addEventListener('click' , replaceText(threeOption[i]));
-		element.addEventListener('click', function(element) { document.getElementsByTagName('H3')[0].innerHTML = "Hello World" } );
+		element.addEventListener('click', function(element) { document.getElementsByTagName('H3')[0].innerHTML = 'Hi' } );
 	}
 }
 
 function replaceText(buttonLabel) {
 	var elementH3 = document.getElementsByTagName('H3');
 	elementH3[0].innerText = buttonLabel;
-
-
-	// document.getElementById("myBtn").addEventListener("click", function(){
- //    document.getElementById("demo").innerHTML = "Hello World";
-	// });
-
 }
 
 // function sayHello2(name) {
