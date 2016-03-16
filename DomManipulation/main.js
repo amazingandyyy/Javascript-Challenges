@@ -19,12 +19,14 @@ document.addEventListener('DOMContentLoaded', init);
 
 function init() {
 	setUpDivRow();
-	setUpDivcolmd12();
+	setUpDiv('col-md-12', );
 	setUpH3();
 	setUpStarButton();
 	setUpHr();
 
-	setUpDivBtnGroup();
+	setUpDiv('btn-group');
+	setUpDivBtnGroup(4);
+	setUpDivBtnGroup(3);
 }
 
 function setUpDivRow() {
@@ -33,45 +35,48 @@ function setUpDivRow() {
 	document.getElementsByClassName('container')[0].appendChild(elementDivRow);
 }
 
-function setUpDivcolmd12() {
-	var elementMD = document.createElement('div');
-	elementMD.className = 'col-md-12';
-	elementDivRow.appendChild(elementMD);
+var elementColMD;
+function setUpDiv(divName, appendName) {
+	elementColMD = document.createElement('div');
+	elementColMD.className = divName;
+	elementDivRow.appendChild(elementColMD);
 }
 
 function setUpH3() {
 	var elementH3 = document.createElement('h3');
 	elementH3.innerText = 'Nothing clicked yet!';
-	elementDivRow.appendChild(elementH3);
+	elementColMD.appendChild(elementH3);
 }
 
-function replaceText() {
-	var elementH3 = document.createElement('h3');
-	elementH3.innerText = "Left"	
+// function replaceText() {
+// 	var elementH3 = document.createElement('h3');
+// 	elementH3.innerText = "Left"	
 
-	document.body.appendChild(elementH3);	
-}
+// 	document.body.appendChild(elementH3);	
+// }
 
 function setUpStarButton() {
 	var elementStarButton = document.createElement('button');
 	elementStarButton.innerText = 'Star';
 	elementStarButton.className = 'btn btn-default btn-lg';
-	elementDivRow.appendChild(elementStarButton);
+	elementColMD.appendChild(elementStarButton);
 }
 
 function setUpHr() {
 	var element = document.createElement('hr');
-	elementDivRow.appendChild(element);
+	elementColMD.appendChild(element);
 }
 
-function setUpDivBtnGroup() {
-	for (var i=0; i < 4; i ++) {
+function setUpDivBtnGroup(buttonCount) {
+	for (var i=0; i < buttonCount; i ++) {
 		var element = document.createElement('button');
 		element.innerText = i + 1;
 		element.className = 'btn btn-default';
-		elementDivRow.appendChild(element);
+		elementColMD.appendChild(element);
 	}
 }
+
+
 
 
 // <div class="container">
