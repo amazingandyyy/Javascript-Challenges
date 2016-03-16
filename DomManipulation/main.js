@@ -13,33 +13,33 @@
 'use strict';
 
 var buttons = [];
+var elementDivRow;
 
-document.addEventListener('DOMContentLoaded', myFunction);
+document.addEventListener('DOMContentLoaded', init);
 
-function myFunction() {
-	var elementDiv = document.createElement('div');
-	elementDiv.className = 'row';
-	document.body.appendChild(elementDiv);
+function init() {
+	setUpDivRow();
+	setUpDivcolmd12();
+	setUpH3();
+	setUpStarButton();
+}
 
-		// document.body.appendChild(element);	
-		var element = document.createElement('div');
-		element.className = 'col-md-12';
-		// element.innerText = 'my Button';
-		// element.addEventListener('click',  replaceText);
+function setUpDivRow() {
+	elementDivRow = document.createElement('div');
+	elementDivRow.className = 'row';
+	document.getElementsByClassName('container')[0].appendChild(elementDivRow);
+}
 
-		// document.body.appendChild(element);
-		elementDiv.appendChild(element);
+function setUpDivcolmd12() {
+	var elementMD = document.createElement('div');
+	elementMD.className = 'col-md-12';
+	elementDivRow.appendChild(elementMD);
+}
 
-			var element2 = document.createElement('h3');
-			element2.innerText = 'Nothing clicked yet!';
-			elementDiv.appendChild(element2);
-
-
-				var element3 = document.createElement('button');
-				element3.innerText = 'Star';
-				element3.className = 'btn btn-default btn-lg';
-				elementDiv.appendChild(element3);
-
+function setUpH3() {
+	var elementH3 = document.createElement('h3');
+	elementH3.innerText = 'Nothing clicked yet!';
+	elementDivRow.appendChild(elementH3);
 }
 
 function replaceText() {
@@ -47,6 +47,13 @@ function replaceText() {
 	elementH3.innerText = "Left"	
 
 	document.body.appendChild(elementH3);	
+}
+
+function setUpStarButton() {
+	var elementStarButton = document.createElement('button');
+	elementStarButton.innerText = 'Star';
+	elementStarButton.className = 'btn btn-default btn-lg';
+	elementDivRow.appendChild(elementStarButton);
 }
 
 // <div class="container">
