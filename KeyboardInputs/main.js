@@ -21,6 +21,7 @@ $(document).ready(init);
 
 function init() {
 	appendliteral();
+	keyBoardInput();
 }
 
 function appendliteral() {
@@ -30,4 +31,18 @@ function appendliteral() {
 		$('#literalLabel').append(creatingArray[index] + ' ');
 	});
 }
+
+function keyBoardInput() {
+	$("#inputLetter").on('keyup', checkLiteral);
+}
+
+function checkLiteral() {
+	var correct = 0;
+
+	var letter = $("#inputLetter").val();
+	  if(letter == '') {
+	     alert('Input can not be left blank');
+	     return;
+	  }
+ }
 
