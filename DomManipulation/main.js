@@ -12,8 +12,10 @@
 
 'use strict';
 
-var buttons = [];
 var elementDivRow;
+var elementColMD;
+var elementDivEmpty = '';
+var elementDivBtnGroup = '';
 
 document.addEventListener('DOMContentLoaded', init);
 
@@ -47,7 +49,6 @@ function setUpDivRow() {
 	document.getElementsByClassName('container')[0].appendChild(elementDivRow);
 }
 
-var elementColMD;
 function setUpDiv(divName) {
 	elementColMD = document.createElement('div');
 	elementColMD.className = divName;
@@ -72,13 +73,11 @@ function setUpHr() {
 	elementColMD.appendChild(element);
 }
 
-var elementDivEmpty = '';
 function setUpDivEmpty() {
 	elementDivEmpty = document.createElement('div');
 	elementColMD.appendChild(elementDivEmpty);
 }
 
-var elementDivBtnGroup = '';
 function setUpDivBtnGroup(divName) {
 	elementDivBtnGroup = document.createElement('div');
 	elementDivBtnGroup.className = divName;
@@ -123,61 +122,3 @@ function applyHeader(e) {
 	var elementH3 = document.getElementsByTagName('H3');
 	elementH3[0].innerHTML = header;
 }
-
-
-function replaceText(buttonLabel) {
-	var elementH3 = document.getElementsByTagName('H3');
-	elementH3[0].innerHTML = buttonLabel;
-}
-
-// document.getElementById("myBtn").addEventListener("click", function() {
-//     myFunction(p1, p2);
-// });
-
-// function myFunction(a, b) {
-//     var result = a * b;
-//     document.getElementById("demo").innerHTML = result;
-// }
-
-// function sayHello2(name) {
-//     var text = 'Hello ' + name; // Local variable
-//     var say = function() { console.log(text); }
-//     return say;
-// }
-// var say2 = sayHello2('Bob');
-// say2(); // logs "Hello Bob"
-
-
-// <div class="container">
-//   <div class="row">
-//     <div class="col-md-12">
-//       <h3>Nothing clicked yet!</h3>
-//       <button type="button" class="btn btn-default btn-lg">Star</button>
-//       <hr>
-//       <div>
-//         <div class="btn-group">
-//           <button type="button" class="btn btn-default">1</button>
-//           <button type="button" class="btn btn-default">2</button>
-//           <button type="button" class="btn btn-default">3</button>
-//           <button type="button" class="btn btn-default">4</button>
-//         </div>
-//         <div class="btn-group">
-//           <button type="button" class="btn btn-default">5</button>
-//           <button type="button" class="btn btn-default">6</button>
-//           <button type="button" class="btn btn-default">7</button>
-//         </div>
-//         <div class="btn-group">
-//           <button type="button" class="btn btn-default">8</button>
-//         </div>
-//       </div>
-//       <hr>
-//       <div>
-//         <div class="btn-group btn-group-lg">
-//           <button type="button" class="btn btn-default">Left</button>
-//           <button type="button" class="btn btn-default">Middle</button>
-//           <button type="button" class="btn btn-default">Right</button>
-//         </div>
-//       </div>
-//     </div>
-//   </div>
-// </div>
