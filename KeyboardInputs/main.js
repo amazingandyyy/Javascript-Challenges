@@ -36,16 +36,28 @@ function keyBoardInput() {
 	$(document).on('keypress', checkLiteral2);
 }
 
-
 var letterMatching = [];
 function checkLiteral2(e) {
 
 	var codeValue = String.fromCharCode(e.charCode);
 
 	if ($.isNumeric(codeValue)) {
+		
+	   var pattern = RegExp(codeValue, 'gi'); // pattern: /a/gi
+	   var word = letterMatching.join();
+	   var result = word.match(pattern);
+	   if (result != null ) {
+	   		
+	   		if(result.length > 0) {
+				console.log(result);
+	   		} else {
 
-		// Add to Number
-		console.log(codeValue);
+	   		}
+
+	   } else {
+			letterMatching.push(codeValue);
+	   }
+
 	}
 
 
