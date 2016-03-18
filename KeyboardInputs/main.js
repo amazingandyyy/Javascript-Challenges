@@ -1,8 +1,8 @@
 
 // Using jQuery, create a game that requires the user to press every letter and number on the keyboard
-
 // Start by creating an array with all 26 letters and 10 numbers
-// Display all of the characters on the screen. This should be done using a jQuery to append to the DOM once. In other words, don't do a separate append for each character
+// Display all of the characters on the screen. This should be done using a jQuery to append to the DOM once.
+// In other words, don't do a separate append for each character
 // Whenever the user presses a key, check to see if it is a number or a letter that has not been pressed already
 // If it is, change the appearance of that character (for example, grey it out to show that it has been pressed already)
 // If they key has already been pressed, tell the user!
@@ -25,24 +25,69 @@ function init() {
 }
 
 function appendliteral() {
-	$('#literalLabel').append();
-
 	$.each(creatingArray, function(index) {
 		$('#literalLabel').append(creatingArray[index] + ' ');
 	});
 }
 
 function keyBoardInput() {
-	$("#inputLetter").on('keyup', checkLiteral);
+	// $("#inputLetter").on('keypress', checkLiteral2);
+
+	$(document).on('keypress', checkLiteral2);
 }
+
+
+var letterMatching = [];
+function checkLiteral2(e) {
+
+	var codeValue = String.fromCharCode(e.charCode);
+
+	if ($.isNumeric(codeValue)) {
+
+		// Add to Number
+		console.log(codeValue);
+	}
+
+
+}
+
+
 
 function checkLiteral() {
 	var correct = 0;
 
 	var letter = $("#inputLetter").val();
-	  if(letter == '') {
-	     alert('Input can not be left blank');
-	     return;
-	  }
+	var pattern = RegExp(letter, 'gi'); // pattern: /a/gi
+
+	var str = creatingArray.join('');
+	var result = str.match(pattern);
+	// letterMatching.push(result);
+
+
+	// $.each(creatingArray, function(index) {
+ //      if (creatingArray[index] === letter) {
+ //          letterMatching.push(letter);
+ //      }
+ //    });
+
+
+	 // $("#btnGuess").click(guessWord);
+    
+	 //  function guessWord() {
+	  
+	 //   var letter = $("#guessLetter").val();
+	 //   var word = 'ABC';
+	 //   var pattern = RegExp(letter, 'gi'); // pattern: /a/gi
+
+	 //   var result = word.match(pattern);
+	 //   alert('Ignore case sensitive:' + result);
+	   
+	 //  }
+  
+	// console.log("letter: " + letter);
+	  // if(letter == '') {
+	  //    alert('Input can not be left blank');
+	  //    return;
+	  // }
  }
 

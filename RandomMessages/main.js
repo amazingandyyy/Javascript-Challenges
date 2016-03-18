@@ -16,7 +16,7 @@ $(document).ready(init);
 
 function init() {
 	loadMessage();
-	$('#btnNew').on('click',  messageRandomly)
+	$('#btnNew').on('click', messageRandomly)
 }
 
 function loadMessage() {
