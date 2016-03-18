@@ -31,31 +31,29 @@ function appendliteral() {
 }
 
 function keyBoardInput() {
-	// $("#inputLetter").on('keypress', checkLiteral2);
-
-	$(document).on('keypress', checkLiteral2);
+	$(document).on('keypress', checkLiteral);
 }
 
-var letterMatching = [];
-function checkLiteral2(e) {
+var letterMatchingArray = [];
+function checkLiteral(e) {
 
 	var codeValue = String.fromCharCode(e.charCode);
 
 	if ($.isNumeric(codeValue)) {
 		
 	   var pattern = RegExp(codeValue, 'gi'); // pattern: /a/gi
-	   var word = letterMatching.join();
+	   var word = letterMatchingArray.join();
 	   var result = word.match(pattern);
 	   if (result != null ) {
 	   		
 	   		if(result.length > 0) {
 				console.log(result);
 	   		} else {
-
+	   			console.log("key has already been pressed" + result);
 	   		}
 
 	   } else {
-			letterMatching.push(codeValue);
+			letterMatchingArray.push(codeValue);
 	   }
 
 	}
@@ -65,7 +63,7 @@ function checkLiteral2(e) {
 
 
 
-function checkLiteral() {
+function checkLiteral2() {
 	var correct = 0;
 
 	var letter = $("#inputLetter").val();
@@ -73,7 +71,7 @@ function checkLiteral() {
 
 	var str = creatingArray.join('');
 	var result = str.match(pattern);
-	// letterMatching.push(result);
+	// letterMatchingArray.push(result);
 
 
 	// $.each(creatingArray, function(index) {
