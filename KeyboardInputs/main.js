@@ -27,6 +27,7 @@ function init() {
 
 function appendliteral() {
 	$.each(creatingArray, function(index) {
+		// $('#literalLabel').append(creatingArray[index] + ' ');
 		$('#literalLabel').append('<span>' + creatingArray[index] + ' ' + '</span>');
 	});
 }
@@ -40,7 +41,16 @@ function checkLiteral(e) {
 
 	var codeValue = String.fromCharCode(e.charCode);
 
-	if ($.isNumeric(codeValue)) {
+    var regex = new RegExp("[a-zA-Z0-9]");
+    // var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
+    if (regex.test(codeValue)) {
+        console.log('letter or number');
+    
+    // e.preventDefault();
+    // return false;
+
+
+	// if ($.isNumeric(codeValue)) {
 		
 	   var pattern = RegExp(codeValue, 'gi'); // pattern: /a/gi
 	   var word = letterMatchingArray.join();
@@ -50,7 +60,7 @@ function checkLiteral(e) {
 	   		if(result.length > 0) {
 				console.log("key has already been pressed: " + result);
 
-				var $grayLetter = $('<span>').addClass('btn-default');
+				// var $grayLetter = $('#literalLabel').attr('disabled', 'disabled');
 
 				// var $likesIcon = $('<span>').addClass("glyphicon").addClass("glyphicon-thumbs-up")
 				// $(selections).attr( "disabled", "disabled" );
@@ -63,8 +73,8 @@ function checkLiteral(e) {
 			letterMatchingArray.push(codeValue);
 	   }
 
+	// }
 	}
-
 
 }
 
