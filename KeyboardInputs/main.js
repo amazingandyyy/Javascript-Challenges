@@ -49,7 +49,6 @@ function checkLiteral(e) {
     // e.preventDefault();
     // return false;
 
-
 	// if ($.isNumeric(codeValue)) {
 		
 	   var pattern = RegExp(codeValue, 'gi'); // pattern: /a/gi
@@ -74,16 +73,27 @@ function checkLiteral(e) {
 	   } else {
 			letterMatchingArray.push(codeValue);
 
-			$('#dialog').text('You won the game');
-
 	   }
 
 	// }
 	}
 
+	gameDisplayMessage();
+
 }
 
+function gameDisplayMessage() {
 
+	// $.each(letterMatchingArray, function(index) { 
+	// 	console.log("length: " + letterMatchingArray.length);
+	// 	console.log("value: " + letterMatchingArray[index]);
+	// });
+
+	if (letterMatchingArray.length >= 26) {
+		$('#dialog').text('You won the game');
+	}
+
+}
 
 function checkLiteral2() {
 	var correct = 0;
