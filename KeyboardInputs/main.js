@@ -39,6 +39,8 @@ function keyBoardInput() {
 var letterMatchingArray = [];
 function checkLiteral(e) {
 
+	$('#dialog').empty();
+
 	var codeValue = String.fromCharCode(e.charCode);
 
     var regex = new RegExp("[a-zA-Z0-9]");
@@ -50,6 +52,24 @@ function checkLiteral(e) {
     // return false;
 
 	// if ($.isNumeric(codeValue)) {
+
+
+		// var pattern = RegExp(letter, "gi");
+		// var hangmanName = hangmanObj.name;
+
+		// for (var i=0; i < hangmanName.length; i++) {
+
+		// if (hangmanName.substring(i, i + 1).match(pattern) != null) {
+
+		// 	  if ( hangmanName.substring(i, i + 1).match(pattern).length > 0 ) {
+		// 	    correct++;
+		// 	    // matching letter replace to Label
+		// 	    wordHolder = wordHolder.substring(0, i) + letter + wordHolder.substring(i + 1, wordHolder.length + 1);
+		// 	    $("#answerWord").text(wordHolder);
+		// 	  }
+		// 	}
+		// }
+
 		
 	   var pattern = RegExp(codeValue, 'gi'); // pattern: /a/gi
 	   var word = letterMatchingArray.join();
@@ -61,10 +81,10 @@ function checkLiteral(e) {
 
 				// var $grayLetter = $('#literalLabel').attr('disabled', 'disabled');
 
-				// var $likesIcon = $('<span>').addClass("glyphicon").addClass("glyphicon-thumbs-up")
 				// $(selections).attr( "disabled", "disabled" );
+				// $('#literalLabel').append('<span>' + creatingArray[index] + ' ' + '</span>');
 
-				$('#dialog').text('Key has already been pressed');
+				$('#dialog').text(result + ' : Key has already been pressed');
 
 	   		} else {
 	   			
@@ -72,14 +92,12 @@ function checkLiteral(e) {
 
 	   } else {
 			letterMatchingArray.push(codeValue);
-
 	   }
 
 	// }
 	}
 
 	gameDisplayMessage();
-
 }
 
 function gameDisplayMessage() {
@@ -94,42 +112,3 @@ function gameDisplayMessage() {
 	}
 
 }
-
-function checkLiteral2() {
-	var correct = 0;
-
-	var letter = $("#inputLetter").val();
-	var pattern = RegExp(letter, 'gi'); // pattern: /a/gi
-
-	var str = creatingArray.join('');
-	var result = str.match(pattern);
-	// letterMatchingArray.push(result);
-
-
-	// $.each(creatingArray, function(index) {
- //      if (creatingArray[index] === letter) {
- //          letterMatching.push(letter);
- //      }
- //    });
-
-
-	 // $("#btnGuess").click(guessWord);
-    
-	 //  function guessWord() {
-	  
-	 //   var letter = $("#guessLetter").val();
-	 //   var word = 'ABC';
-	 //   var pattern = RegExp(letter, 'gi'); // pattern: /a/gi
-
-	 //   var result = word.match(pattern);
-	 //   alert('Ignore case sensitive:' + result);
-	   
-	 //  }
-  
-	// console.log("letter: " + letter);
-	  // if(letter == '') {
-	  //    alert('Input can not be left blank');
-	  //    return;
-	  // }
- }
-
