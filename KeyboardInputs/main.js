@@ -25,11 +25,14 @@ function init() {
 	keyBoardInput();
 }
 
+var literalArray = [];
 function appendliteral() {
 	$.each(creatingArray, function(index) {
-		// $('#literalLabel').append(creatingArray[index] + ' ');
-		$('#literalLabel').append('<span>' + creatingArray[index] + ' ' + '</span>');
+	 	var $appendLabel = $('<span>').text(creatingArray[index]).addClass('selected');
+	 	literalArray.push($appendLabel);
 	});
+
+	$('#literalLabel').append(literalArray);
 }
 
 function keyBoardInput() {
@@ -42,11 +45,10 @@ function checkLiteral(e) {
 	$('#dialog').empty();
 
 	var codeValue = String.fromCharCode(e.charCode);
-
     var regex = new RegExp("[a-zA-Z0-9]");
-    // var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
+
     if (regex.test(codeValue)) {
-        console.log('letter or number');
+        console.log('letter, number');
     
     // e.preventDefault();
     // return false;
@@ -69,7 +71,6 @@ function checkLiteral(e) {
 		// 	  }
 		// 	}
 		// }
-
 		
 	   var pattern = RegExp(codeValue, 'gi'); // pattern: /a/gi
 	   var word = letterMatchingArray.join();
@@ -101,11 +102,6 @@ function checkLiteral(e) {
 }
 
 function gameDisplayMessage() {
-
-	// $.each(letterMatchingArray, function(index) { 
-	// 	console.log("length: " + letterMatchingArray.length);
-	// 	console.log("value: " + letterMatchingArray[index]);
-	// });
 
 	if (letterMatchingArray.length >= 26) {
 		$('#dialog').text('You won the game');
