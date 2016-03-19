@@ -58,12 +58,14 @@ function checkLiteral(e) {
 	   if (result != null ) {
 	   		
 	   		if(result.length > 0) {
-				console.log("key has already been pressed: " + result);
+				console.log("Key has already been pressed: " + result);
 
 				// var $grayLetter = $('#literalLabel').attr('disabled', 'disabled');
 
 				// var $likesIcon = $('<span>').addClass("glyphicon").addClass("glyphicon-thumbs-up")
 				// $(selections).attr( "disabled", "disabled" );
+
+				$('#dialog').text('Key has already been pressed');
 
 	   		} else {
 	   			
@@ -71,6 +73,9 @@ function checkLiteral(e) {
 
 	   } else {
 			letterMatchingArray.push(codeValue);
+
+			$('#dialog').text('You won the game');
+
 	   }
 
 	// }
