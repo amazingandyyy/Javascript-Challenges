@@ -4,6 +4,7 @@
 // Display all of the characters on the screen. This should be done using a jQuery to append to the DOM once.
 // In other words, don't do a separate append for each character
 // Whenever the user presses a key, check to see if it is a number or a letter that has not been pressed already
+
 // If it is, change the appearance of that character (for example, grey it out to show that it has been pressed already)
 // If they key has already been pressed, tell the user!
 // Once all the characters have been pressed, display a message telling the user that they have won the game!
@@ -26,7 +27,7 @@ function init() {
 
 function appendliteral() {
 	$.each(creatingArray, function(index) {
-		$('#literalLabel').append(creatingArray[index] + ' ');
+		$('#literalLabel').append('<span>' + creatingArray[index] + ' ' + '</span>');
 	});
 }
 
@@ -47,9 +48,15 @@ function checkLiteral(e) {
 	   if (result != null ) {
 	   		
 	   		if(result.length > 0) {
-				console.log(result);
+				console.log("key has already been pressed: " + result);
+
+				var $grayLetter = $('<span>').addClass('btn-default');
+
+				// var $likesIcon = $('<span>').addClass("glyphicon").addClass("glyphicon-thumbs-up")
+				// $(selections).attr( "disabled", "disabled" );
+
 	   		} else {
-	   			console.log("key has already been pressed" + result);
+	   			
 	   		}
 
 	   } else {
