@@ -32,14 +32,14 @@ function appendliteral() {
 	 	literalArray.push($appendLabel);
 	});
 
-	$('#literalLabel').append(literalArray);
+	$('#literalDiv').append(literalArray);
 }
 
 function keyBoardInput() {
 	$(document).on('keypress', checkLiteral);
 }
 
-var letterMatchingArray = [];
+var matchingArray = [];
 function checkLiteral(e) {
 
 	$('#dialog').empty();
@@ -73,17 +73,17 @@ function checkLiteral(e) {
 		// }
 		
 	   var pattern = RegExp(codeValue, 'gi'); // pattern: /a/gi
-	   var word = letterMatchingArray.join();
+	   var word = matchingArray.join();
 	   var result = word.match(pattern);
 	   if (result != null ) {
 	   		
 	   		if(result.length > 0) {
 				console.log("Key has already been pressed: " + result);
 
-				// var $grayLetter = $('#literalLabel').attr('disabled', 'disabled');
+				// var $grayLetter = $('#literalDiv').attr('disabled', 'disabled');
 
 				// $(selections).attr( "disabled", "disabled" );
-				// $('#literalLabel').append('<span>' + creatingArray[index] + ' ' + '</span>');
+				// $('#literalDiv').append('<span>' + creatingArray[index] + ' ' + '</span>');
 
 				$('#dialog').text(result + ' : Key has already been pressed');
 
@@ -92,7 +92,7 @@ function checkLiteral(e) {
 	   		}
 
 	   } else {
-			letterMatchingArray.push(codeValue);
+			matchingArray.push(codeValue);
 	   }
 
 	// }
@@ -103,7 +103,7 @@ function checkLiteral(e) {
 
 function gameDisplayMessage() {
 
-	if (letterMatchingArray.length >= 26) {
+	if (matchingArray.length >= 26) {
 		$('#dialog').text('You won the game');
 	}
 
