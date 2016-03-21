@@ -28,8 +28,8 @@ function init() {
 var literalArray = [];
 function appendliteral() {
 	$.each(creatingArray, function(index) {
-	 	var $appendLabel = $('<span>').text(creatingArray[index]).addClass('selected');
-	 	literalArray.push($appendLabel);
+	 	var $appendValus = $('<span>').text(creatingArray[index]).addClass('selected');
+	 	literalArray.push($appendValus);
 	});
 
 	$('#literalDiv').append(literalArray);
