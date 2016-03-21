@@ -26,10 +26,13 @@ function init() {
 }
 
 var literalArray = [];
+var literalArray2 = [];
 function appendliteral() {
 	$.each(creatingArray, function(index) {
 	 	var $appendValus = $('<span>').text(creatingArray[index]).addClass('selected');
+	 	var appendValus = $('<span>').text(creatingArray[index]).addClass('selected');
 	 	literalArray.push($appendValus);
+	 	literalArray2.push(appendValus);
 	});
 
 	$('#literalDiv').append(literalArray);
