@@ -74,8 +74,21 @@ function checkLiteral(e) {
 		// 	  }
 		// 	}
 		// }
+
+		var pattern = RegExp(codeValue, 'gi'); // pattern: /a/gi
 		
-	   var pattern = RegExp(codeValue, 'gi'); // pattern: /a/gi
+		for (var i=0; i < literalArray2.length; i++) {
+			if (literalArray2.substring(i, i + 1).match(pattern) != null) {
+
+			  if ( literalArray2.substring(i, i + 1).match(pattern).length > 0 ) {
+			    // correct++;
+			    // matching letter replace to Label
+			    // wordHolder = wordHolder.substring(0, i) + letter + wordHolder.substring(i + 1, wordHolder.length + 1);
+			    // $("#answerWord").text(wordHolder);
+			  }
+			}
+		}
+	   
 	   var word = matchingArray.join();
 	   var result = word.match(pattern);
 	   if (result != null ) {
