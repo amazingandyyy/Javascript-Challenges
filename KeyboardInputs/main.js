@@ -45,6 +45,10 @@ function keyBoardInput() {
 }
 
 var matchingArray = [];
+var wordHolder = "";
+
+var viewArray = [];
+
 function checkLiteral(e) {
 
 	$('#dialog').empty();
@@ -60,36 +64,30 @@ function checkLiteral(e) {
 
 	// if ($.isNumeric(codeValue)) {
 
-
-		// var pattern = RegExp(letter, "gi");
-		// var hangmanName = hangmanObj.name;
-
-		// for (var i=0; i < hangmanName.length; i++) {
-
-		// if (hangmanName.substring(i, i + 1).match(pattern) != null) {
-
-		// 	  if ( hangmanName.substring(i, i + 1).match(pattern).length > 0 ) {
-		// 	    correct++;
-		// 	    // matching letter replace to Label
-		// 	    wordHolder = wordHolder.substring(0, i) + letter + wordHolder.substring(i + 1, wordHolder.length + 1);
-		// 	    $("#answerWord").text(wordHolder);
-		// 	  }
-		// 	}
-		// }
 		var correct = 0;
 		var pattern = RegExp(codeValue, 'gi'); // pattern: /a/gi
-		var str = literalArray.join("");
+		var literalString = literalArray.join("");
 		for (var i=0; i < literalArray.length; i++) {
-			if (str.substring(i, i + 1).match(pattern) != null) {
+			if (literalString.substring(i, i + 1).match(pattern) != null) {
 
-			  if ( str.substring(i, i + 1).match(pattern).length > 0 ) {
+			  if ( literalString.substring(i, i + 1).match(pattern).length > 0 ) {
 			    correct++;
 			    // matching letter replace to Label
-			    // wordHolder = wordHolder.substring(0, i) + letter + wordHolder.substring(i + 1, wordHolder.length + 1);
-			    // $("#answerWord").text(wordHolder);
+			    // wordHolder = wordHolder.substring(0, i) + codeValue + wordHolder.substring(i + 1, wordHolder.length + 1);
+			    wordHolder = wordHolder.substring(0, i) + codeValue + wordHolder.substring(i + 1, wordHolder.length + 1);
+
+	 			// var $appendValus = $('<span>').text(creatingArray[index]).addClass('selected');
+
+			 	var appendValus = $('<span>').text(wordHolder).addClass('selected');
+
+			    // $("#answerWord").text(appendValus);
+
+			    viewArray.push(appendValus);
 			  }
 			}
 		}
+
+		$("#answerWord").append(viewArray);
 
 	   var word = matchingArray.join();
 	   var result = word.match(pattern);
