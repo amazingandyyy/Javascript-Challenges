@@ -29,9 +29,11 @@ var literalArray = [];
 var literalArray2 = [];
 function appendliteral() {
 	$.each(creatingArray, function(index) {
-	 	var $appendValus = $('<span>').text(creatingArray[index]).addClass('selected');
-	 	var appendValus = $('<span>').text(creatingArray[index]).addClass('selected');
-	 	literalArray.push($appendValus);
+	 	// var $appendValus = $('<span>').text(creatingArray[index]).addClass('selected');
+	 	// var appendValus = $('<span>').text(creatingArray[index]).addClass('selected');
+	 	var $appendValus = $('').text(creatingArray[index]);
+	 	var appendValus = $('<span>').text(creatingArray[index]);
+	 	literalArray.push(creatingArray[index]);
 	 	literalArray2.push(appendValus);
 	});
 
@@ -74,21 +76,21 @@ function checkLiteral(e) {
 		// 	  }
 		// 	}
 		// }
-
+		var correct = 0;
 		var pattern = RegExp(codeValue, 'gi'); // pattern: /a/gi
-		
-		for (var i=0; i < literalArray2.length; i++) {
-			if (literalArray2.substring(i, i + 1).match(pattern) != null) {
+		var str = literalArray.join("");
+		for (var i=0; i < literalArray.length; i++) {
+			if (str.substring(i, i + 1).match(pattern) != null) {
 
-			  if ( literalArray2.substring(i, i + 1).match(pattern).length > 0 ) {
-			    // correct++;
+			  if ( str.substring(i, i + 1).match(pattern).length > 0 ) {
+			    correct++;
 			    // matching letter replace to Label
 			    // wordHolder = wordHolder.substring(0, i) + letter + wordHolder.substring(i + 1, wordHolder.length + 1);
 			    // $("#answerWord").text(wordHolder);
 			  }
 			}
 		}
-	   
+
 	   var word = matchingArray.join();
 	   var result = word.match(pattern);
 	   if (result != null ) {
