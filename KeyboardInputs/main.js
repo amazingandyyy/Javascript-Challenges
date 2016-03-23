@@ -13,32 +13,11 @@
 
 'use strict';
 
-// var creatingArray = ['a','b','c','d','e','f','g','h','i','j','k','l','m'
-// 					,'n','o','p','q','r','s','t','u','v','w','x','y','z'
-// 					,'1','2','3','4','5','6','7','8','9','10'
-// 					];
-
 $(document).ready(init);
 
 function init() {
-	// appendliteral();
 	keyBoardInput();
 }
-
-var literalArray = [];
-var literalArray2 = [];
-// function appendliteral() {
-// 	$.each(creatingArray, function(index) {
-// 	 	// var $appendValus = $('<span>').text(creatingArray[index]).addClass('selected');
-// 	 	// var appendValus = $('<span>').text(creatingArray[index]).addClass('selected');
-// 	 	var $appendValus = $('').text(creatingArray[index]);
-// 	 	var appendValus = $('<span>').text(creatingArray[index]);
-// 	 	literalArray.push(creatingArray[index]);
-// 	 	literalArray2.push(appendValus);
-// 	});
-
-// 	$('#literalDiv').append(literalArray);
-// }
 
 function keyBoardInput() {
 	$(document).on('keypress', checkLiteral);
@@ -58,11 +37,8 @@ function checkLiteral(e) {
 
     if (regex.test(codeValue)) {
         console.log('letter or number');
-  
-		var correct = 0;
+
 		var pattern = RegExp(codeValue, 'gi'); // pattern: /a/gi
-
-
 
 		var word = matchingArray.join();
 		var result = word.match(pattern);
@@ -70,8 +46,6 @@ function checkLiteral(e) {
 
 			if(result.length > 0) {
 				console.log("Key has already been pressed: " + result);
-
-				//var appendValus = $('<span>').text(wordHolder).addClass('selected');
 				$('#dialog').text(result + ' : Key has already been pressed').addClass('selected');
 					return;
 				} else {
@@ -82,47 +56,6 @@ function checkLiteral(e) {
 
 		$("#answerWord").empty();
 		$("#answerWord").append(matchingArray);
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
-		// var literalString = literalArray.join("");
-		// for (var i=0; i < literalArray.length; i++) {
-		// 	if (literalString.substring(i, i + 1).match(pattern) != null) {
-
-		// 	  if ( literalString.substring(i, i + 1).match(pattern).length > 0 ) {
-		// 	    correct++;
-		// 	    // matching letter replace to Label
-		// 	    // wordHolder = wordHolder.substring(0, i) + codeValue + wordHolder.substring(i + 1, wordHolder.length + 1);
-		// 	    wordHolder = wordHolder.substring(0, i) + codeValue + wordHolder.substring(i + 1, wordHolder.length + 1);
-
-	 // 			// var $appendValus = $('<span>').text(creatingArray[index]).addClass('selected');
-
-		// 	 	var appendValus = $('<span>').text(wordHolder).addClass('selected');
-
-		// 	    // $("#answerWord").text(appendValus);
-
-		// 	    viewArray.push(appendValus);
-		// 	  }
-		// 	}
-		// }
-
-		// $("#answerWord").append(viewArray);
-
-
-
-
-	// }
 	}
 
 	gameDisplayMessage();
