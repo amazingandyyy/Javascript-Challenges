@@ -7,7 +7,18 @@
 // assert_equal("11001010".binaryToDecimal(), 202);
 // assert_equal("1110".binaryToDecimal(), 14);
 
-function () {
+function assert_equal(bin, dec) {
 
+// binary string to decimal number
+
+var binary;
+
+	
+	for(var i=0; i < bin.length - 1; bin++) {
+		binary = bin.charAt(i);
+	}
 
 }
+
+// console.log(assert_equal("11001010".binaryToDecimal(), 202));
+// console.log(assert_equal("1110".binaryToDecimal(), 14));
