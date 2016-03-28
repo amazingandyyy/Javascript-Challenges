@@ -13,8 +13,8 @@ function decoder(key, code) {
 
           if (num === parseInt(c)) {
 
-             console.log("num: " + num);
-             console.log("c: " + c);
+             // console.log("num: " + num);
+             // console.log("c: " + c);
 
              arrayDecoder.push(k); 
           }
