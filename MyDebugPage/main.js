@@ -2,33 +2,43 @@
  * Complete the function below.
  */
 function decoder(key, code) {
-  var num = 0;
-  var array = key.split("");
+  
+    var str = "";
+    code.map(function(c) {
 
-  var arrayDecoder = [];
+        str += key.charAt(parseInt(c));
 
-  array.map(function(k) {
+    });
 
-      code.map(function(c) {
+    console.log("str: " + str);
 
-          if (num === parseInt(c)) {
+  // var num = 0;
+  // var array = key.split("");
 
-             // console.log("num: " + num);
-             // console.log("c: " + c);
+  // var arrayDecoder = [];
 
-             arrayDecoder.push(k); 
-          }
+  // array.map(function(k) {
 
-      });
+  //     code.map(function(c) {
 
-      num++;
+  //         if (num === parseInt(c)) {
+
+  //            console.log("num: " + num);
+  //            console.log("c: " + c);
+
+  //            arrayDecoder.push(k); 
+  //         }
+
+  //     });
+
+  //     num++;
                       
-      // console.log("num:" + num);
+  //     // console.log("num:" + num);
 
-     }
-  );
+  //    }
+  // );
 
-  return arrayDecoder.join("");
+  // return arrayDecoder.join("");
 
 }
 
