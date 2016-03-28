@@ -32,5 +32,11 @@ return obj;
 
 }
 
+String.prototype.binaryToDecimal = function() {
+
+
+}
+
+
 // console.log(assert_equal("11001010".binaryToDecimal(), 202));
 // console.log(assert_equal("1110".binaryToDecimal(), 14));
