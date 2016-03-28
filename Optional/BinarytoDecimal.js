@@ -11,16 +11,24 @@ function assert_equal(bin, dec) {
 
 // binary string to decimal number
 
-var obj = {};
+	function binaryToDecimal() {
 
+		var binary;
+			
+			for(var i=0; i < bin.length - 1; i++) {
+				binary = bin.charAt(i);
 
-var binary;
-	
-	for(var i=0; i < bin.length - 1; i++) {
-		binary = bin.charAt(i);
-
-		console.log("binary: " + binary);
+				console.log("binary: " + binary);
+			}
 	}
+
+var obj = {
+
+	"aaa" : binaryToDecimal()
+
+};
+
+return obj;	
 
 }
 
