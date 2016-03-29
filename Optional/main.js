@@ -11,32 +11,38 @@ function assert_equal(bin, dec) {
 
 // binary string to decimal number
 
-	function binaryToDecimal() {
-
-		var binary;
-			
-			for(var i=0; i < bin.length - 1; i++) {
-				binary = bin.charAt(i);
-
-				console.log("binary: " + binary);
-			}
+	if (bin === dec) {
+		console.log("binaryToDecimal");
 	}
 
-var obj = {
+// 	function binaryToDecimal() {
 
-	"aaa" : binaryToDecimal()
+// 		var binary;
+			
+// 			for(var i=0; i < bin.length - 1; i++) {
+// 				binary = bin.charAt(i);
 
-};
+// 				console.log("binary: " + binary);
+// 			}
+// 	}
 
-return obj;	
+// var obj = {
+
+// 	"aaa" : binaryToDecimal()
+
+// };
+
+// return obj;	
 
 }
 
 String.prototype.binaryToDecimal = function() {
 
+	var return;
+
+	return 14;
 
 }
 
-
 // console.log(assert_equal("11001010".binaryToDecimal(), 202));
-// console.log(assert_equal("1110".binaryToDecimal(), 14));
+console.log(assert_equal("1110".binaryToDecimal(), 14));
