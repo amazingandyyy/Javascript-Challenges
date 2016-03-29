@@ -1,49 +1,46 @@
-/*
- * Complete the function below.
- */
-function decoder(key, code) {
-  
-    var str = "";
-    code.map(function(c) {
+// var obj = {};
 
-        str += key.charAt(parseInt(c));
+// obj.FirstName = "John";
 
-    });
+function People(firstName) {
 
-    console.log("str: " + str);
-
-  // var num = 0;
-  // var array = key.split("");
-
-  // var arrayDecoder = [];
-
-  // array.map(function(k) {
-
-  //     code.map(function(c) {
-
-  //         if (num === parseInt(c)) {
-
-  //            console.log("num: " + num);
-  //            console.log("c: " + c);
-
-  //            arrayDecoder.push(k); 
-  //         }
-
-  //     });
-
-  //     num++;
-                      
-  //     // console.log("num:" + num);
-
-  //    }
-  // );
-
-  // return arrayDecoder.join("");
+  this.FirstName = firstName;
 
 }
 
-var code = [2, 14, 3, 8, 13, 6];
-console.log(decoder('ABCDEFGHIJKLMNOPQRSUTVWXYZ', code));
+// var p = new People("John");
+var p = new People("John");
+
+People.prototype.Phone = "4161231234";
+
+
+p.constructor.Color = "Blue Color";
+
+
+console.log(p.Phone);
+
+
+console.log(p.Phone);
+console.log(p.Color);
+
+
+// /*
+//  * Complete the function below.
+//  */
+// function decoder(key, code) {
+  
+//     var str = "";
+//     code.map(function(c) {
+
+//         str += key.charAt(parseInt(c));
+
+//     });
+
+//     console.log("str: " + str);
+// }
+
+// var code = [2, 14, 3, 8, 13, 6];
+// console.log(decoder('ABCDEFGHIJKLMNOPQRSUTVWXYZ', code));
 
 // /*
 //  * Complete the function below.
