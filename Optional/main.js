@@ -14,34 +14,13 @@ function assert_equal(bin, dec) {
 	if (bin === dec) {
 		console.log("binaryToDecimal");
 	}
-
-// 	function binaryToDecimal() {
-
-// 		var binary;
-			
-// 			for(var i=0; i < bin.length - 1; i++) {
-// 				binary = bin.charAt(i);
-
-// 				console.log("binary: " + binary);
-// 			}
-// 	}
-
-// var obj = {
-
-// 	"aaa" : binaryToDecimal()
-
-// };
-
-// return obj;	
-
 }
 
 String.prototype.binaryToDecimal = function() {
 
-	var return;
-
-	return 14;
-
+	return this.split('').reverse().reduce(function(x, y, i){
+	      return (y === '1') ? x + Math.pow(2, i) : x;
+	    }, 0);
 }
 
 // console.log(assert_equal("11001010".binaryToDecimal(), 202));
