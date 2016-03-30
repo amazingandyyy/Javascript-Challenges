@@ -2,26 +2,34 @@
 
 // obj.FirstName = "John";
 
-function People(firstName) {
+// function People(firstName) {
 
-  this.FirstName = firstName;
+//   this.FirstName = firstName;
+
+// }
+
+
+function People() {
+
+  // this.FirstName = firstName;
 
 }
 
+var People = new People();
+
+debugger;
+
 // var p = new People("John");
-var p = new People("John");
+// var p = new People("John");
 
-People.prototype.Phone = "4161231234";
+// People.prototype.Phone = "4161231234";
 
+// p.constructor.Color = "Blue Color";
 
-p.constructor.Color = "Blue Color";
+// console.log(p.Phone);
 
-
-console.log(p.Phone);
-
-
-console.log(p.Phone);
-console.log(p.Color);
+// console.log(p.Phone);
+// console.log(p.Color);
 
 
 // /*
