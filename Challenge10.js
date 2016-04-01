@@ -21,7 +21,7 @@ function arrayAnalyzer(args) {
   // arguments is special varliable which is also have length but not "array"
   // There are no standard push, pop, slice method
   // arguments convert to array prototype -> slice -> call
-  // but it might have have performance issue
+  // but it might have performance issue
   var argumentArray = Array.prototype.slice.call(arguments);
 
   // filter out non-numbers

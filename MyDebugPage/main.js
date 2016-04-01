@@ -15,7 +15,7 @@ function People() {
 
 }
 
-var People = new People();
+var p = new People();
 
 debugger;
 
