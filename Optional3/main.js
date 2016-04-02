@@ -17,7 +17,7 @@ $(document).ready(init);
 
 function init() {
 	$display = $("#fname");
-	displayP = $("#fname");
+	// displayP = $("#fname");
 	$("#btnSubmit").on("click", getValue);
 }
 
