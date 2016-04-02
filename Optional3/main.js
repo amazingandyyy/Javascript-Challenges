@@ -6,17 +6,24 @@
 
 // Test your app with the Declaration of Independence text!
 
+'use strict';
 
+var arrayVal = [];
+var $display;
+var displayP;
 $(document).ready(init);
 
-var display = "";
+//var display = "";
 
 function init() {
-	display = $("#fname");
+	$display = $("#fname");
+	displayP = $("#fname");
 	$("#btnSubmit").on("click", getValue);
 }
 
 
 function getValue() {
-	var currVal = display.val();
+	var currVal = $display.val();
+
+	arrayVal.push = currVal;
 }
