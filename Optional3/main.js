@@ -10,14 +10,10 @@
 
 var arrayVal = [];
 var $display;
-var displayP;
 $(document).ready(init);
-
-//var display = "";
 
 function init() {
 	$display = $("#fname");
-	// displayP = $("#fname");
 	$("#btnSubmit").on("click", getValue);
 }
 
