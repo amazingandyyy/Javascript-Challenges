@@ -8,7 +8,7 @@
 
 'use strict';
 
-var arrayVal = [];
+// var arrayVal = [];
 var $display;
 $(document).ready(init);
 
@@ -17,9 +17,17 @@ function init() {
 	$("#btnSubmit").on("click", getValue);
 }
 
-
 function getValue() {
 	var currVal = $display.val();
 
-	arrayVal.push = currVal;
+	var array = currVal.split(" ");
+	var arraySotring = array.sort();
+
+	var count = 0;
+	var freqwords = arraySotring.map(function(c, i, a) {
+		if (arraySotring[i-1] == arraySotring[i]) {
+			count++;
+		}
+	}); 
+	// arrayVal.push = currVal;
 }
