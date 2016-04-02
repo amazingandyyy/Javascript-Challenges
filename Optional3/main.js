@@ -9,7 +9,14 @@
 
 $(document).ready(init);
 
-function init() {
+var display = "";
 
+function init() {
+	display = $("#fname");
+	$("#btnSubmit").on("click", getValue);
 }
 
+
+function getValue() {
+	var currVal = display.val();
+}
