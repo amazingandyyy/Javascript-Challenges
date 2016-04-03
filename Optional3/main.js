@@ -8,7 +8,7 @@
 
 'use strict';
 
-// var arrayVal = [];
+var countArray = [];
 var $display;
 $(document).ready(init);
 
@@ -27,6 +27,7 @@ function getValue() {
 	var freqwords = arraySotring.map(function(c, i, a) {
 		if (arraySotring[i-1] == arraySotring[i]) {
 			count++;
+			countArray.push(count);
 		}
 	}); 
 	// arrayVal.push = currVal;
