@@ -21,13 +21,17 @@ function getValue() {
 	var currVal = $display.val();
 
 	var array = currVal.split(" ");
-	var arraySotring = array.sort();
+	var arraySorting = array.sort();
 
-	var count = 0;
-	var freqwords = arraySotring.map(function(c, i, a) {
-		if (arraySotring[i-1] == arraySotring[i]) {
+	var count = 1;
+	var freqwords = arraySorting.map(function(c, i, a) {
+		if (arraySorting[i-1] == arraySorting[i]) {
 			count++;
+			countArray.push(c);
 			countArray.push(count);
+		} else {
+			countArray.push(c);
+			count = 0;
 		}
 	}); 
 	// arrayVal.push = currVal;
