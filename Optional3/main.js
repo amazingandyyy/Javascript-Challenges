@@ -26,12 +26,19 @@ function getValue() {
 	var count = 1;
 	var freqwords = arraySorting.map(function(c, i, a) {
 		if (arraySorting[i-1] == arraySorting[i]) {
-			count++;
-			countArray.push(c);
-			countArray.push(count);
+			count++; console.log("count: " + count);
+			// countArray.push(c);
+			// countArray.push(count);
 		} else {
-			countArray.push(c);
+			// countArray.push(c);
 			count = 0;
+		}
+
+		if (count != 0) {
+			countArray.push(count);
+		}
+		if (countArray.indexOf(c) == - 1) {
+			countArray.push(c);
 		}
 	}); 
 	// arrayVal.push = currVal;
