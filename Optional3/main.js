@@ -25,22 +25,22 @@ function getValue() {
 
 	var count = 1;
 	var freqwords = arraySorting.map(function(c, i, a) {
-		if (arraySorting[i-1] == arraySorting[i]) {
-			count++; console.log("i: " + i);
-			console.log("count: " + count);
-			// countArray.push(c);
-			// countArray.push(count);
+		if (arraySorting[i] == arraySorting[i+1]) {
+			count++;
 		} else {
-			// countArray.push(c);
-			count = 0;
+
+			countArray.push(c);
+			if (count == 1) {
+				countArray.push(count);	
+
+			} else {
+				countArray.push(count);	
+			}
+
+			count = 1;
 		}
 
-		if (count != 0) {
-			countArray.push(count);
-		}
-		if (countArray.indexOf(c) == - 1) {
-			countArray.push(c);
-		}
+		console.log("count: " + count);
+		console.log("countArray: " + countArray);
 	}); 
-	// arrayVal.push = currVal;
 }
