@@ -15,6 +15,7 @@ $(document).ready(init);
 function init() {
 	$display = $("#fname");
 	$("#btnSubmit").on("click", getValue);
+	// addValue();
 }
 
 function getValue() {
@@ -40,7 +41,24 @@ function getValue() {
 			count = 1;
 		}
 
-		console.log("count: " + count);
-		console.log("countArray: " + countArray);
-	}); 
+		// console.log("count: " + count);
+		// console.log("countArray: " + countArray);
+	});
+
+	addValue();
 }
+
+function addValue() {
+
+	// console.log(countArray);
+
+	// jQuery for loop
+	// jQuery append into table
+
+	$.each(countArray, function(i, l) {
+		console.log(i, l);
+	});
+
+}
+
+
