@@ -26,7 +26,8 @@ function getValue() {
 	var count = 1;
 	var freqwords = arraySorting.map(function(c, i, a) {
 		if (arraySorting[i-1] == arraySorting[i]) {
-			count++; console.log("count: " + count);
+			count++; console.log("i: " + i);
+			console.log("count: " + count);
 			// countArray.push(c);
 			// countArray.push(count);
 		} else {
