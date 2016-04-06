@@ -10,12 +10,14 @@
 
 var countArray = [];
 var $display;
+
+var statusArray = [];
+
 $(document).ready(init);
 
 function init() {
 	$display = $("#fname");
 	$("#btnSubmit").on("click", getValue);
-	// addValue();
 }
 
 function getValue() {
@@ -31,18 +33,23 @@ function getValue() {
 		} else {
 
 			countArray.push(c);
-			if (count == 1) {
-				countArray.push(count);	
+			countArray.push(count);
 
-			} else {
-				countArray.push(count);	
-			}
+			var obj = {};
+			obj.word = c;
+			obj.count = count;	
+			statusArray.push(obj);
+
+			// if (count == 1) {
+			// 	countArray.push(count);
+
+			// } else {
+			// 	countArray.push(count);	
+			// }
 
 			count = 1;
 		}
 
-		// console.log("count: " + count);
-		// console.log("countArray: " + countArray);
 	});
 
 	addValue();
@@ -50,22 +57,18 @@ function getValue() {
 
 function addValue() {
 
-	// console.log(countArray);
+	// statusArray.sort(function(a, b) { return a.count - b.count; });
 
-	// jQuery for loop
-	// jQuery append into table
+	// $.each(statusArray , )
 
-	$.each(countArray, function(index, value) {
-		console.log(index, value);
-		// $( "#" + i ).append( document.createTextNode( " - " + val ) );
-		// $("#left").append( document.createTextNode( + value) );
+	// $.each(countArray, function(index, value) {
 
-		if (index % 2 == 0) {
-			$("#left").append("<p>" + value + "</p>");
-		} else {
-			$("#right").append("<p>" + value + "</p>");
-		}
-	});
+	// 	if (index % 2 == 0) {
+	// 		$("#left").append("<p>" + value + "</p>");
+	// 	} else {
+	// 		$("#right").append("<p>" + value + "</p>");
+	// 	}
+	// });
 
 }
 
