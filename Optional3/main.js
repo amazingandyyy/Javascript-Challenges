@@ -57,18 +57,14 @@ function getValue() {
 
 function addValue() {
 
-	// statusArray.sort(function(a, b) { return a.count - b.count; });
+	statusArray.sort(function(a, b) { return a.count - b.count; });
 
-	// $.each(statusArray , )
+	$.each(statusArray, function(index, value) {
 
-	// $.each(countArray, function(index, value) {
+		$("#left").append("<p>" + value.word + "</p>");
+		$("#right").append("<p>" + value.count + "</p>");
 
-	// 	if (index % 2 == 0) {
-	// 		$("#left").append("<p>" + value + "</p>");
-	// 	} else {
-	// 		$("#right").append("<p>" + value + "</p>");
-	// 	}
-	// });
+	});
 
 }
 
