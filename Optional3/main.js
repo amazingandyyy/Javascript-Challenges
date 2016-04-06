@@ -55,8 +55,16 @@ function addValue() {
 	// jQuery for loop
 	// jQuery append into table
 
-	$.each(countArray, function(i, l) {
-		console.log(i, l);
+	$.each(countArray, function(index, value) {
+		console.log(index, value);
+		// $( "#" + i ).append( document.createTextNode( " - " + val ) );
+		// $("#left").append( document.createTextNode( + value) );
+
+		if (index % 2 == 0) {
+			$("#left").append("<p>" + value + "</p>");
+		} else {
+			$("#right").append("<p>" + value + "</p>");
+		}
 	});
 
 }
