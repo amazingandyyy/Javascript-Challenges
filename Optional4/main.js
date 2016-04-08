@@ -23,18 +23,34 @@ function addCardHandler() {
 	var $usernameInput = $("#username");
 	var username = $usernameInput.val();
 
-	$.get("https://api.github.com/users/" + username)
+	$.getJSON("https://api.github.com/users", function(data, status) {
+		console.log("data: ", data);
+		console.log("status: ", status);
+	} );
 
-	.done(function(data, status) {
-		console.log("data", data);
-		console.log("status", status);
-		var $card = makeCard(data);
-		$("#output").append($card);
-	})
-	.fail(function(data, status) {
-		console.log("data", data);
-		console.log("status", status);
-	})
+	// .done(function(data, status) {
+	// 	console.log("data", data);
+	// 	console.log("status", status);
+	// 	var $card = makeCard(data);
+	// 	$("#output").append($card);
+	// })
+	// .fail(function(data, status) {
+	// 	console.log("data", data);
+	// 	console.log("status", status);
+	// })
+
+	// $.get("https://api.github.com/users/" + username)
+
+	// .done(function(data, status) {
+	// 	console.log("data", data);
+	// 	console.log("status", status);
+	// 	var $card = makeCard(data);
+	// 	$("#output").append($card);
+	// })
+	// .fail(function(data, status) {
+	// 	console.log("data", data);
+	// 	console.log("status", status);
+	// })
 }
 
 
