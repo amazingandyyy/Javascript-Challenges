@@ -23,7 +23,7 @@ function addCardHandler() {
 	var $usernameInput = $("#username");
 	var username = $usernameInput.val();
 
-	$.get("http://api.github.com/users/" + username)
+	$.get("https://api.github.com/users/" + username)
 
 	.done(function(data, status) {
 		console.log("data", data);
