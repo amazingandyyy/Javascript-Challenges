@@ -18,14 +18,31 @@ function init() {
 	$("#addCard").click(addCardHandler);
 }
 
+var userCount = 0;
+var organizationCount = 0;
+
 function addCardHandler() {
 
 	var $usernameInput = $("#username");
 	var username = $usernameInput.val();
 
 	$.getJSON("https://api.github.com/users", function(data, status) {
-		console.log("data: ", data);
-		console.log("status: ", status);
+		// console.log("data: ", data);
+		// console.log("status: ", status);
+
+		$.each(data, function(key, value) {
+
+			if (value.type === "User") {
+				userCount++;
+			} else if (value.type === "Organization") {
+				organizationCount++;
+			}
+			
+		});
+
+		console.log("User: " + userCount);
+		console.log("Organization: " + organizationCount);
+
 	} );
 
 	// .done(function(data, status) {
