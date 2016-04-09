@@ -15,12 +15,15 @@
 $(document).ready(init);
 
 function init() {
-	$("#addCard").click(addCardHandler);
+	// $("#addCard").click(addCardHandler);
+	addCardHandler();
 }
 
 var userCount = 0;
 var organizationCount = 0;
 var site_adminCount = 0;
+var loginLength5Gr = 0;
+var loginLength5Lr = 0;
 
 function addCardHandler() {
 
@@ -43,11 +46,19 @@ function addCardHandler() {
 				site_adminCount++;
 			}
 
+			if (value.login.length > 5) {
+				loginLength5Gr++;
+			} else {
+				loginLength5Lr++;
+			}
+
 		});
 
-		console.log("User: " + userCount);
-		console.log("Organization: " + organizationCount);
-		console.log("site_adminCount: " + site_adminCount);
+		$("#userCount").text(userCount);
+		$("#organizationCount").text(organizationCount);
+		$("#site_adminCount").text(site_adminCount);
+		$("#loginLength5Gr").text(loginLength5Gr);
+		$("#loginLength5Lr").text(loginLength5Lr);
 
 	} );
 
