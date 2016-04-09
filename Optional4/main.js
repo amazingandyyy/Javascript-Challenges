@@ -20,6 +20,7 @@ function init() {
 
 var userCount = 0;
 var organizationCount = 0;
+var site_adminCount = 0;
 
 function addCardHandler() {
 
@@ -27,8 +28,8 @@ function addCardHandler() {
 	var username = $usernameInput.val();
 
 	$.getJSON("https://api.github.com/users", function(data, status) {
-		// console.log("data: ", data);
-		// console.log("status: ", status);
+		console.log("data: ", data);
+		console.log("status: ", status);
 
 		$.each(data, function(key, value) {
 
@@ -37,11 +38,16 @@ function addCardHandler() {
 			} else if (value.type === "Organization") {
 				organizationCount++;
 			}
-			
+
+			if (value.site_admin === true) {
+				site_adminCount++;
+			}
+
 		});
 
 		console.log("User: " + userCount);
 		console.log("Organization: " + organizationCount);
+		console.log("site_adminCount: " + site_adminCount);
 
 	} );
 
