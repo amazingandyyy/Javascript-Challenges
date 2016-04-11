@@ -60,7 +60,4 @@ function addCardHandler() {
 		$("#loginLength5Lr").text(loginLength5Lr);
 
 	} );
-
 }
-
-
