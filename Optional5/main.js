@@ -15,7 +15,7 @@
 $(document).ready(init);
 
 function init() {
-	addCardHandler();
+	// addCardHandler();
 }
 
 var userCount = 0;
@@ -25,39 +25,4 @@ var loginLength5Gr = 0;
 var loginLength5Lr = 0;
 
 function addCardHandler() {
-
-	var $usernameInput = $("#username");
-	var username = $usernameInput.val();
-
-	$.getJSON("https://api.github.com/users", function(data, status) {
-		console.log("data: ", data);
-		console.log("status: ", status);
-
-		$.each(data, function(key, value) {
-
-			if (value.type === "User") {
-				userCount++;
-			} else if (value.type === "Organization") {
-				organizationCount++;
-			}
-
-			if (value.site_admin === true) {
-				site_adminCount++;
-			}
-
-			if (value.login.length > 5) {
-				loginLength5Gr++;
-			} else {
-				loginLength5Lr++;
-			}
-
-		});
-
-		$("#userCount").text(userCount);
-		$("#organizationCount").text(organizationCount);
-		$("#site_adminCount").text(site_adminCount);
-		$("#loginLength5Gr").text(loginLength5Gr);
-		$("#loginLength5Lr").text(loginLength5Lr);
-
-	} );
 }
